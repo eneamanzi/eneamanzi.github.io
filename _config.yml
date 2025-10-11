@@ -1,3 +1,7 @@
 theme: jekyll-theme-minimal
 title: TEST's homepage
 description: Bookmark this to keep an eye on my project updates!
+
+domain: eneamanzi.github.io
+url: https://eneamanzi.github.io/
+baseurl: /docs/
