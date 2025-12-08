@@ -2,96 +2,78 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Enea Manzi
     - name: Date of Birth
-      value: 14th March 1879
+      value: 7th July 2002
     - name: Languages
-      value: English, German
+      value: Italian (Native), English (B2)
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Master's Degree in Cyber Security
+      institution: University of Milan, Milan, Italy
+      year: 2024 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - Currently pursuing.
+    - title: Bachelor's Degree in System and Network Security
+      institution: University of Milan, Milan, Italy
+      year: 2021 - 2024
       description:
-        - Description 1.
-        - Description 2.
+        - "<b>Grade:</b> 110/110 <i>cum laude</i>"
+        - "<b>Thesis:</b> Design and Implementation of a Framework for Evaluating Distributed System"
+        - "<b>Supervisors:</b> Prof. Marco Anisetti, Dr. Filippo Berto"
+    - title: High School Diploma in Computer Science
+      institution: IIS Badoni, Lecco, Italy
+      year: 2016 - 2021
+      description:
+        - "<b>Grade:</b> 93/100"
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Curricular Internship
+      institution: SESAR Lab, University of Milan
+      year: Mar 2024 - Sep 2024
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - "Contributed to the design of the <b>Assurance Engine</b>, a <b>Rust</b>-based framework on <b>Kubernetes</b>."
+        - "Integrated <b>Elasticsearch</b> for data collection and querying."
+        - "Implemented <b>REST APIs</b> and formal contracts for verifying <b>Non-Functional Properties</b> (CIA triad, reliability, scalability)."
+    - title: Web Developer (WBL)
+      institution: DaTrik Solutions, Casargo, Italy
+      year: Jan 2020 - Feb 2020
       description:
-        - Description 1.
-        - Description 2.
+        - "Developed a web application during high school internship."
+        - "<b>Stack:</b> HTML, JavaScript, jQuery."
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
-
-- title: Academic Interests
+    - title: FTP Client and Server
+      year: 2022 - 2023
+      description:
+        - Developed a multi-threaded FTP-compliant client-server application in C.
+        - Implemented Active (PORT) and Passive (PASV) data transfer modes.
+        - "<b>Key Skills:</b> C, Socket Programming, Multithreading, Network Protocols, FTP, Git"
+    - title: Exhibition Web App
+      year: 2021 - 2022
+      description:
+        - Built a dynamic web application serving as a digital portfolio.
+        - "<b>Stack:</b> Node.js/Express (Backend), HTML/CSS/jQuery (Frontend), MongoDB (DB)"
+        - "<b>Key Skills:</b> AJAX, REST APIs, Git, Full Stack Development"
+     
+- title: Technical Skills
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Programming Languages
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - C, Java, Python, SQL, JavaScript, Bash
+    - title: Architectures & Software
       items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+        - Docker, Kubernetes, Git
+    - title: Networking & Security
+      items:
+        - Network Protocols, ICT Security Risk, Secure Coding Practices
+    - title: Operating Systems
+      items:
+        - Linux Administration, Windows
