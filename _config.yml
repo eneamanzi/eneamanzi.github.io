@@ -14,7 +14,7 @@ footer_text: >
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
   Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
-lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
+#lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🌐 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://eneamanzi.github.io # the base hostname & protocol for your site
@@ -22,6 +22,18 @@ baseurl: "" # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
+
+
+# -----------------------------------------------------------------------------
+# Jekyll Polyglot
+# -----------------------------------------------------------------------------
+languages: ["en", "it"]
+default_lang: "en"
+exclude_from_localization: ["assets", "bin", "_sass", "Gemfile", "Gemfile.lock", "node_modules", "vendor"]
+parallel_localization: false
+lang_from_path: true   # <--- Importante: aiuta il plugin a capire la lingua dalla cartella
+country_flag: false # set true for allowing flag symbol in language toggle
+
 
 # -----------------------------------------------------------------------------
 # Theme
@@ -159,6 +171,7 @@ plugins:
   - jekyll-toc
   - jekyll-twitter-plugin
   - jemoji
+  - jekyll-polyglot
 
 # Sitemap settings
 defaults:

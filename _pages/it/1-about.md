@@ -1,7 +1,8 @@
 ---
 layout: about
 title: About
-permalink: /
+lang: it
+permalink: /it/
 subtitle: M.Sc. Cybersecurity Student & Software Developer
 
 

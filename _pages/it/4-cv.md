@@ -1,6 +1,7 @@
 ---
 layout: cv
-permalink: /cv/
+lang: it
+permalink: /it/cv/
 title: CV
 nav: true
 nav_order: 4
