@@ -5,7 +5,6 @@ description: TODO Developed a multi-threaded FTP-compliant client-server applica
 img: assets/img/12.jpg
 importance: 1
 category: University
-related_publications: true
 ---
 TODO 
 
