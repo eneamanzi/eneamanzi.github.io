@@ -3,8 +3,8 @@ const ninja = document.querySelector('ninja-keys');
 
 // add the home and posts menu items
 ninja.data = [{
-    id: "nav-about",
-    title: "About",
+    id: "nav-",
+    title: "",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
@@ -14,28 +14,28 @@ ninja.data = [{
           description: "A growing collection of your cool projects.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/projects/";
+            window.location.href = "/it/projects/";
           },
         },{id: "nav-repositories",
           title: "Repositories",
           description: "A list of my public repositories.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/repositories/";
+            window.location.href = "/it/repositories/";
           },
         },{id: "nav-cv",
           title: "CV",
           description: "Curriculum Vitae of Enea Manzi - Cyber Security Student &amp; Software Developer",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/cv/";
+            window.location.href = "/it/cv/";
           },
         },{id: "nav-bookshelf",
           title: "bookshelf",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/books/";
+            window.location.href = "/it/books/";
           },
         },{id: "books-the-godfather",
           title: 'The Godfather',
@@ -46,22 +46,22 @@ ninja.data = [{
           title: 'Exhibition Webapp',
           description: "TODO A dynamic web application serving as a digital portfolio.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/en/exhibition-webapp.html";
+              window.location.href = "/projects/it/exhibition-webapp.html";
             },},{id: "projects-ftp-client-amp-server",
           title: 'FTP Client &amp;amp; Server',
           description: "TODO Developed a multi-threaded FTP-compliant client-server application in C for file transfer, fully interoperable with FileZilla.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/en/ftp-server.html";
+              window.location.href = "/projects/it/ftp-server.html";
             },},{id: "projects-template-back-ground-image",
           title: 'Template Back Ground Image',
           description: "with background image",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/en/template-bg-image.html";
+              window.location.href = "/projects/it/template-bg-image.html";
             },},{id: "projects-template-redirect-site",
           title: 'Template Redirect Site',
           description: "a project that redirects to another website",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/en/template-redirect-site.html";
+              window.location.href = "/projects/it/template-redirect-site.html";
             },},{
         id: 'social-email',
         title: 'email',
