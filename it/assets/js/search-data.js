@@ -14,7 +14,7 @@ ninja.data = [{
           description: "A growing collection of your cool projects.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/projects/";
+            window.location.href = "/progetti/";
           },
         },{id: "nav-repositories",
           title: "Repositories",
@@ -35,7 +35,7 @@ ninja.data = [{
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/books/";
+            window.location.href = "/libri/";
           },
         },{id: "books-the-godfather",
           title: 'The Godfather',
