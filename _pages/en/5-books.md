@@ -3,6 +3,8 @@ layout: book-shelf
 title: bookshelf
 lang: en
 permalink: /books/
+page_id: books
+
 nav: true
 nav_order: 5
 collection: books

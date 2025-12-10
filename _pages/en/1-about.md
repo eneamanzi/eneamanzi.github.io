@@ -3,6 +3,7 @@ layout: about
 title: About
 lang: en
 permalink: /
+page_id: about
 subtitle: M.Sc. Cybersecurity Student & Software Developer
 
 

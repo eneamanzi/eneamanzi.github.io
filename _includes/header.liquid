@@ -140,7 +140,13 @@
                   {% assign flag_code = other_language | split: "-" | last %}
                   {% if flag_code == "en" %}{% assign flag_code = "gb" %}{% endif %}
 
-                  <a class="nav-link" {% static_href -%} href="{{ site.baseurl }}/{{ other_language }}{{ page.url }}" {%- endstatic_href %}>
+                  {% assign final_url = page.permalink_lang[other_language] %}
+                  
+                  {% if other_language == "it" %}
+                    {% assign final_url = "/it" | append: final_url %}
+                  {% endif %}
+
+                  <a class="nav-link" {% static_href -%} href="{{ final_url }}" {%- endstatic_href %}>
                     {% if site.country_flag %}
                       <span class="fi fi-{{ flag_code }}"></span>
                     {% else %}
@@ -151,7 +157,7 @@
                   {% assign flag_code = site.default_lang | split: "-" | last %}
                   {% if flag_code == "en" %}{% assign flag_code = "gb" %}{% endif %}
                   
-                  <a class="nav-link" {% static_href -%} href="{{ page.url | replace_first: '/it', '' }}" {%- endstatic_href %}>
+                  <a class="nav-link" {% static_href -%} href="{{ page.permalink_lang[site.default_lang] }}" {%- endstatic_href %}>
                     {% if site.country_flag %}
                       <span class="fi fi-{{ flag_code }}"></span>
                     {% else %}
@@ -177,23 +183,19 @@
                       {% assign loop_flag = l | split: "-" | last %}
                       {% if loop_flag == "en" %}{% assign loop_flag = "gb" %}{% endif %}
                       
-                      {% if l == site.default_lang %}
-                        <a class="dropdown-item" {% static_href -%} href="{{ page.url | replace_first: '/it', '' }}" {%- endstatic_href %}>
-                          {% if site.country_flag %}
-                            <span class="fi fi-{{ loop_flag }}"></span>
-                          {% else %}
-                            {{ l | upcase }}
-                          {% endif %}
-                        </a>
-                      {% else %}
-                         <a class="dropdown-item" {% static_href -%} href="{{ site.baseurl }}/{{ l }}{{ page.url }}" {%- endstatic_href %}>
-                          {% if site.country_flag %}
-                            <span class="fi fi-{{ loop_flag }}"></span>
-                          {% else %}
-                            {{ l | upcase }}
-                          {% endif %}
-                        </a>
+                      {% assign target_link = page.permalink_lang[l] %}
+                      
+                      {% if l == "it" %}
+                         {% assign target_link = "/it" | append: target_link %}
                       {% endif %}
+
+                      <a class="dropdown-item" {% static_href -%} href="{{ target_link }}" {%- endstatic_href %}>
+                          {% if site.country_flag %}
+                            <span class="fi fi-{{ loop_flag }}"></span>
+                          {% else %}
+                            {{ l | upcase }}
+                          {% endif %}
+                        </a>
                     {% endif %}
                   {% endfor %}
                 </div>

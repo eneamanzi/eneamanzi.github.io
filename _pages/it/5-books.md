@@ -2,7 +2,9 @@
 layout: book-shelf
 title: Libreria
 lang: it
-permalink: /books/
+permalink: /libri/
+page_id: books
+
 nav: true
 nav_order: 5
 collection: books

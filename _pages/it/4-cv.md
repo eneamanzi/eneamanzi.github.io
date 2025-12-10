@@ -2,6 +2,8 @@
 layout: cv
 lang: it
 permalink: /cv/
+page_id: cv
+
 title: CV
 nav: true
 nav_order: 4
