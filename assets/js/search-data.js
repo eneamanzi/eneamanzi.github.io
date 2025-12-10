@@ -41,7 +41,7 @@ ninja.data = [{
           title: 'The Godfather',
           description: "",
           section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather.html";
+              window.location.href = "/books/en/the_godfather.html";
             },},{id: "projects-exhibition-webapp",
           title: 'Exhibition Webapp',
           description: "TODO A dynamic web application serving as a digital portfolio.",
