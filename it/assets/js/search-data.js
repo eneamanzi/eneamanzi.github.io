@@ -3,39 +3,39 @@ const ninja = document.querySelector('ninja-keys');
 
 // add the home and posts menu items
 ninja.data = [{
-    id: "nav-",
-    title: "",
+    id: "nav-about",
+    title: "About",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-projects",
-          title: "Projects",
+  },{id: "nav-progetti",
+          title: "Progetti",
           description: "A growing collection of your cool projects.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/it/projects/";
+            window.location.href = "/projects/";
           },
         },{id: "nav-repositories",
           title: "Repositories",
           description: "A list of my public repositories.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/it/repositories/";
+            window.location.href = "/repositories/";
           },
         },{id: "nav-cv",
           title: "CV",
           description: "Curriculum Vitae of Enea Manzi - Cyber Security Student &amp; Software Developer",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/it/cv/";
+            window.location.href = "/cv/";
           },
-        },{id: "nav-bookshelf",
-          title: "bookshelf",
+        },{id: "nav-libreria",
+          title: "Libreria",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/it/books/";
+            window.location.href = "/books/";
           },
         },{id: "books-the-godfather",
           title: 'The Godfather',
