@@ -1,7 +1,7 @@
 ---
 layout: page
 lang: it
-permalink: /it/repositories/
+permalink: /repositories/
 title: Repositories
 description: A list of my public repositories. #Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.
 nav: true

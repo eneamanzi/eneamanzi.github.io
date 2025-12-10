@@ -2,14 +2,14 @@
 layout: about
 title: About
 lang: it
-permalink: /it/
+permalink: /
 subtitle: M.Sc. Cybersecurity Student & Software Developer
 
 
 profile:
   align: right
   image: cv_pic_resized.png
-  image_circular: false # crops the image to make it circular
+  image_circular: false # crops the image to make it circular\
   more_info: Bellano, Italy
     # <p>555 your office number</p>
     # <p>123 your address street</p>
@@ -29,8 +29,10 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi! My name is **Enea Manzi**.
+Ciao! Mi chiamo **Enea Manzi**.
 
-I have a Bachelor's degree in **System and Network Security** from the **University of Milan** and I am currently studying for a Master's degree in **Cyber Security**.
+Ho una laurea triennale in **Sicurezza dei Sistemi e delle Reti** presso l'**Università degli Studi di Milano** e attualmente sto studiando per una laurea magistrale in **Cyber Security**.
 
-I speak **Italian** (Native) and **English** (B2).
+Parlo **italiano** (Madrelingua) e **inglese** (B2).
+
+***

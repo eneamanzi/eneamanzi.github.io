@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Projects
+title: Progetti
 lang: it
-permalink: /it/projects/
+permalink: /projects/
 description: A growing collection of your cool projects.
 nav: true
 nav_order: 2

@@ -1,8 +1,8 @@
 ---
 layout: book-shelf
-title: bookshelf
+title: Libreria
 lang: it
-permalink: /it/books/
+permalink: /books/
 nav: true
 nav_order: 5
 collection: books

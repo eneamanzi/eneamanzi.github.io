@@ -125,19 +125,71 @@
               </button>
             </li>
           {% endif %}
-          
-          <li class="nav-item">
-            {% if site.active_lang == "en" %}
-              <a class="nav-link" href="{{ site.baseurl }}/it{{ page.url }}" title="Versione Italiana">
-                <span class="fi fi-it"></span> IT
-              </a>
-            {% else %}
-              <a class="nav-link" href="{{ site.baseurl }}{{ page.url | replace: '/it', '' }}" title="English Version">
-                <span class="fi fi-gb"></span> EN
-              </a>
-            {% endif %}
-          </li>
 
+          <!-- Language Switcher -->
+          {% if site.languages.size >= 2 %}
+            {% if site.languages.size == 2 %}
+              {% if site.active_lang == site.languages.first %}
+                {% assign other_language = site.languages.last %}
+              {% else %}
+                {% assign other_language = site.languages.first %}
+              {% endif %}
+
+              <li class="nav-item active">
+                {% if site.active_lang == site.default_lang %}
+                  <a class="nav-link" {% static_href -%} href="{{ site.baseurl }}/{{ other_language }}{{ page.url }}" {%- endstatic_href %}>
+                    {% if site.country_flag %}
+                      <span class="fi fi-{{ other_language | split: "-" | last }}"></span>
+                    {% else %}
+                      {{ other_language | upcase }}
+                    {% endif %}
+                  </a>
+                {% else %}
+                  <a class="nav-link" {% static_href -%} href="{{ page.url | replace_first: '/it', '' }}" {%- endstatic_href %}>
+                    {% if site.country_flag %}
+                      <span class="fi fi-{{ site.default_lang | split: "-" | last }}"></span>
+                    {% else %}
+                      {{ site.default_lang | upcase }}
+                    {% endif %}
+                  </a>
+                {% endif %}
+              </li>
+            {% else %}
+              <li class="nav-item dropdown {% if page.title == p.title %}active{% endif %}">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {% if site.country_flag %}
+                    <span class="fi fi-{{ site.active_lang | split: "-" | last }}"></span>
+                  {% else %}
+                    {{- site.active_lang | upcase }}
+                  {% endif %}
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  {% for l in site.languages %}
+                    {% if l != site.active_lang %}
+                      {% if l == site.default_lang %}
+                        <a class="dropdown-item" {% static_href -%} href="{{ page.url | replace_first: '/it', '' }}" {%- endstatic_href %}>
+                          {% if site.country_flag %}
+                            <span class="fi fi-{{ l | split: "-" | last }}"></span>
+                          {% else %}
+                            {{ l | upcase }}
+                          {% endif %}
+                        </a>
+                      {% else %}
+                         <a class="dropdown-item" {% static_href -%} href="{{ site.baseurl }}/{{ l }}{{ page.url }}" {%- endstatic_href %}>
+                          {% if site.country_flag %}
+                            <span class="fi fi-{{ l | split: "-" | last }}"></span>
+                          {% else %}
+                            {{ l | upcase }}
+                          {% endif %}
+                        </a>
+                      {% endif %}
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </li>
+            {% endif %}
+          {% endif %}
+          
           {% if site.enable_darkmode %}
             <!-- Toogle theme mode -->
             <li class="toggle-container">
