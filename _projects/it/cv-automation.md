@@ -5,6 +5,9 @@ description: Gestione del profilo professionale tramite LaTeX e versionamento Gi
 img: assets/img/cv.png
 importance: 2
 category: Personal
+page_id: cv-automation
+lang: it
+permalink: /projects/cv-automation/
 ---
 
 Non un semplice documento, ma un progetto di gestione dell'identità professionale basato su codice. 

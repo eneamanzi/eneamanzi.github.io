@@ -4,7 +4,10 @@ title: FTP Client in C
 description: Multi-threaded FTP-compliant client application, interoperable with FileZilla.
 img: assets/img/ftp-client.png
 importance: 2
-category: university
+category: University
+lang: en
+page_id: ftp-client
+permalink: /projects/ftp-client/
 ---
 
 Developed a multi-threaded FTP-compliant client-server application in **C** for file transfer, fully interoperable with FileZilla. Course Project (A.Y. 2022-2023).

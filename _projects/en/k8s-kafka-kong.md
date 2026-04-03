@@ -5,6 +5,9 @@ description: Cloud-native architecture with Kafka, Kong, and MongoDB for IoT mon
 img: assets/img/kubernetes.svg
 importance: 1
 category: University
+page_id: k8s-kafka-kong
+lang: en
+permalink: /projects/k8s-kafka-kong/
 ---
 
 Development of a cloud-native Kubernetes infrastructure for IoT ingestion and monitoring, with a particular focus on non-functional properties such as scalability, fault tolerance, and edge-to-core security. Course Project (A.Y. 2025/2026).

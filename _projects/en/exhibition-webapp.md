@@ -5,6 +5,9 @@ description: TODO A dynamic web application serving as a digital portfolio.
 img: assets/img/exhibition-webapp.png
 importance: 5
 category: University
+page_id: exhibition-webapp
+lang: en
+permalink: /projects/exhibition-webapp/
 ---
 TODO 
 

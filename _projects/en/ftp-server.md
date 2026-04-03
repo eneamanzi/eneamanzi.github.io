@@ -5,6 +5,9 @@ description: TODO Developed a multi-threaded FTP-compliant client-server applica
 img: assets/img/ftp.png
 importance: 2
 category: University
+page_id: ftp-server
+lang: en
+permalink: /projects/ftp-server/
 ---
 TODO 
 

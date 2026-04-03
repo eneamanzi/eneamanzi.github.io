@@ -5,6 +5,9 @@ description: Professional profile management through LaTeX and Git versioning.
 img: assets/img/cv.png 
 importance: 2
 category: Personal
+page_id: cv-automation
+lang: en
+permalink: /projects/cv-automation/
 ---
 
 This project treats the professional resume not just as a document, but as a piece of software managed through technical tools.

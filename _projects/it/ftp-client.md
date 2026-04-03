@@ -5,6 +5,9 @@ description: Client multi-threaded conforme al protocollo FTP, interoperabile co
 img: assets/img/ftp-client.png
 importance: 2
 category: University
+lang: it
+page_id: ftp-client
+permalink: /projects/ftp-client/
 ---
 
 Sviluppo di un'applicazione client conforme allo standard **FTP** realizzata interamente in **C**. Il progetto si focalizza sulla robustezza della comunicazione socket e sulla gestione della concorrenza.
