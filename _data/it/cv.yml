@@ -1,0 +1,79 @@
+- title: Informazioni Generali
+  type: map
+  contents:
+    - name: Nome Completo
+      value: Enea Manzi
+    - name: Data di Nascita
+      value: 7 Luglio 2002
+    - name: Lingue
+      value: Italiano (Madrelingua), Inglese (B2)
+
+- title: Istruzione
+  type: time_table
+  contents:
+    - title: Laurea Magistrale in Cyber Security
+      institution: Università degli Studi di Milano, Milano, Italia
+      year: 2024 - In corso
+      description:
+        - Percorso attualmente in corso.
+    - title: Laurea Triennale in Sicurezza dei Sistemi e delle Reti Informatiche
+      institution: Università degli Studi di Milano, Milano, Italia
+      year: 2021 - 2024
+      description:
+        - "<b>Voto:</b> 110/110 <i>e lode</i>"
+        - "<b>Tesi:</b> Progettazione e Implementazione di un Framework per la Valutazione di Sistemi Distribuiti"
+        - "<b>Relatori:</b> Prof. Marco Anisetti, Dr. Filippo Berto"
+    - title: Diploma di Perito Informatico
+      institution: IIS Badoni, Lecco, Italia
+      year: 2016 - 2021
+      description:
+        - "<b>Voto:</b> 93/100"
+
+- title: Esperienze Professionali
+  type: time_table
+  contents:
+    - title: Tirocinio Curriculare
+      institution: Laboratorio SESAR, Università degli Studi di Milano
+      year: Mar 2024 - Set 2024
+      description:
+        - "Contribuito alla progettazione dell'<b>Assurance Engine</b>, un framework basato su <b>Rust</b> in ambiente <b>Kubernetes</b>."
+        - "Integrato <b>Elasticsearch</b> per la raccolta e l'interrogazione dei dati."
+        - "Implementazione di <b>API REST</b> e contratti formali per la verifica delle <b>Proprietà Non Funzionali</b> (triade CIA, affidabilità, scalabilità)."
+    - title: Sviluppatore Web (PCTO)
+      institution: DaTrik Solutions, Casargo, Italia
+      year: Gen 2020 - Feb 2020
+      description:
+        - "Sviluppato un'applicazione web durante lo stage delle scuole superiori."
+        - "<b>Stack:</b> HTML, JavaScript, jQuery."
+
+- title: Progetti
+  type: time_table
+  contents:
+    - title: Client e Server FTP
+      year: 2022 - 2023
+      description:
+        - Sviluppato un'applicazione client-server multi-thread conforme allo standard FTP in C.
+        - Implementazione delle modalità di trasferimento dati Attiva (PORT) e Passiva (PASV).
+        - "<b>Competenze Chiave:</b> C, Socket Programming, Multithreading, Protocolli di Rete, FTP, Git"
+    - title: Exhibition Web App
+      year: 2021 - 2022
+      description:
+        - Creazione di un'applicazione web dinamica utilizzata come portfolio digitale per contenuti multimediali.
+        - "<b>Stack:</b> Node.js/Express (Backend), HTML/CSS/jQuery (Frontend), MongoDB (DB)"
+        - "<b>Competenze Chiave:</b> AJAX, REST APIs, Git, Full Stack Development"
+
+- title: Competenze Tecniche
+  type: nested_list
+  contents:
+    - title: Linguaggi di Programmazione
+      items:
+        - C, Java, Python, SQL, JavaScript, Bash
+    - title: Architetture e Software
+      items:
+        - Docker, Kubernetes, Git
+    - title: Reti e Sicurezza
+      items:
+        - Protocolli di Rete, ICT Security Risk, Secure Coding Practices
+    - title: Sistemi Operativi
+      items:
+        - Amministrazione Linux, Windows

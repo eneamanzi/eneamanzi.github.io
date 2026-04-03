@@ -8,7 +8,7 @@ title: CV
 nav: true
 nav_order: 4
 cv_pdf: cv_english.pdf # you can also use external links here
-description: Curriculum Vitae of Enea Manzi - Cyber Security Student & Software Developer
+description: Curriculum Vitae di Enea Manzi - Studente di Cyber Security & Software Developer
 toc:
   sidebar: left
 ---

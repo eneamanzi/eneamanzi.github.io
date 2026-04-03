@@ -2,7 +2,7 @@
 layout: page
 title: Exhibition Webapp
 description: TODO A dynamic web application serving as a digital portfolio.
-img: assets/img/12.jpg
+img: assets/img/exhibition-webapp.png
 importance: 5
 category: University
 ---

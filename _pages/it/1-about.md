@@ -1,6 +1,6 @@
 ---
 layout: about
-title: About
+title: Chi Sono
 lang: it
 permalink: /
 page_id: about

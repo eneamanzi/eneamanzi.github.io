@@ -1,9 +1,9 @@
 ---
 layout: page
-title: FTP Client & Server
+title: FTP Server
 description: TODO Developed a multi-threaded FTP-compliant client-server application in C for file transfer, fully interoperable with FileZilla.
-img: assets/img/12.jpg
-importance: 1
+img: assets/img/ftp.png
+importance: 2
 category: University
 ---
 TODO 

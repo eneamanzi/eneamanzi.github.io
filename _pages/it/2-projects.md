@@ -5,10 +5,10 @@ lang: it
 permalink: /progetti/
 page_id: projects
 
-description: A growing collection of your cool projects.
+description: Progetti Universitari e Personali
 nav: true
 nav_order: 2
-display_categories: [University, template]
+display_categories: [University, Personal]
 horizontal: false
 ---
 
