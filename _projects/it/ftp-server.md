@@ -1,7 +1,7 @@
 ---
 layout: page
 title: FTP Server
-description: TODO Developed a multi-threaded FTP-compliant client-server application in C for file transfer, fully interoperable with FileZilla.
+description: Developed a multi-threaded FTP-compliant client-server application in C for file transfer, fully interoperable with FileZilla.
 img: assets/img/ftp.png
 importance: 2
 category: University
@@ -9,7 +9,6 @@ page_id: ftp-server
 lang: it
 permalink: /projects/ftp-server/
 ---
-TODO 
 
 This project involved the design and implementation of a concurrent **FTP Server** and **Client** strictly following the **RFC 959** standard.
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Exhibition Webapp
-description: TODO A dynamic web application serving as a digital portfolio.
+description: A dynamic web application serving as a digital portfolio.
 img: assets/img/exhibition-webapp.png
 importance: 5
 category: University
@@ -9,7 +9,6 @@ page_id: exhibition-webapp
 lang: en
 permalink: /projects/exhibition-webapp/
 ---
-TODO 
 
 This project was developed for the **Web and Mobile Programming** course (A.Y. 2021-2022).
 

@@ -5,7 +5,7 @@ lang: en
 permalink: /
 page_id: about
 subtitle: M.Sc. Cybersecurity Student & Software Developer
-
+description: "Personal portfolio of Enea Manzi, M.Sc. Cyber Security student at the University of Milan. Projects in Kubernetes, C, network security, and more."
 
 profile:
   align: right

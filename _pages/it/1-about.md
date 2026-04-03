@@ -5,7 +5,7 @@ lang: it
 permalink: /
 page_id: about
 subtitle: M.Sc. Cybersecurity Student & Software Developer
-
+description: "Portfolio personale di Enea Manzi, studente magistrale in Cyber Security all'Università degli Studi di Milano. Progetti in Kubernetes, C, sicurezza delle reti e altro."
 
 profile:
   align: right

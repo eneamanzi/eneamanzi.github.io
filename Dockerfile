@@ -66,7 +66,11 @@ RUN bundle install --no-cache
 
 EXPOSE 8080
 
+# Risolve il problema dei ritorni a capo (CRLF) se il progetto viene clonato su Windows,
+# convertendo lo script di avvio nel formato nativo Linux (LF) per evitare crash.
+RUN apt-get update && apt-get install -y dos2unix
 COPY bin/entry_point.sh /tmp/entry_point.sh
+RUN dos2unix /tmp/entry_point.sh
 
 # uncomment this if you are having this issue with the build:
 # /usr/local/bundle/gems/jekyll-4.3.4/lib/jekyll/site.rb:509:in `initialize': Permission denied @ rb_sysopen - /srv/jekyll/.jekyll-cache/.gitignore (Errno::EACCES)
