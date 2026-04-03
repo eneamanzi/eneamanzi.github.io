@@ -1,0 +1,171 @@
+- university: Master's Degree in Cyber Security
+  average: "29.23 / 30"
+  cfu: "81 / 120"
+  status: "In progress"
+  exams:
+    - name: Enterprise Security Management
+      grade: 30 cum laude
+      cfu: 6
+      date: 01-04-2026
+    - name: Sensitive Data Processing
+      grade: 25
+      cfu: 6
+      date: 19-12-2025
+    - name: Cloud Computing Technologies
+      grade: 30 cum laude
+      cfu: 6
+      date: 11-12-2025
+    - name: Network Security II
+      grade: 30
+      cfu: 6
+      date: 10-09-2025
+    - name: Advanced Security and Privacy
+      grade: 30
+      cfu: 6
+      date: 07-07-2025
+    - name: Service-Oriented Architectures Security
+      grade: 30 cum laude
+      cfu: 6
+      date: 24-06-2025
+    - name: Software Protection Techniques
+      grade: 28
+      cfu: 6
+      date: 23-06-2025
+    - name: System Modeling and Analysis
+      grade: 30
+      cfu: 6
+      date: 27-05-2025
+    - name: Risk Analysis and Management
+      grade: 27
+      cfu: 6
+      date: 19-02-2025
+    - name: Logic
+      grade: 30 cum laude
+      cfu: 6
+      date: 22-01-2025
+    - name: System Dependability
+      grade: 30
+      cfu: 6
+      date: 15-01-2025
+    - name: Advanced Biometrics
+      grade: 30
+      cfu: 6
+      date: 13-01-2025
+    - name: Privacy and Data Protection
+      grade: 30 cum laude
+      cfu: 6
+      date: 11-12-2024
+    - name: English Language Assessment
+      grade: Pass
+      cfu: 3
+      date: 05-12-2024
+
+- university: Bachelor's Degree in System and Network Security
+  average: "28.92 / 30"
+  cfu: "180 / 180"
+  status: "Graduated"
+  exams:
+    - name: Final Exam
+      grade: Pass
+      cfu: 3
+      date: 22-10-2024
+    - name: Final Internship
+      grade: Pass
+      cfu: 15
+      date: 27-09-2024
+    - name: Web and Mobile Systems Security
+      grade: 30 cum laude
+      cfu: 6
+      date: 08-07-2024
+    - name: Computer Forensics
+      grade: 30 cum laude
+      cfu: 6
+      date: 05-07-2024
+    - name: Artificial Intelligence I
+      grade: 30 cum laude
+      cfu: 6
+      date: 17-06-2024
+    - name: Systems and Network Security
+      grade: 30 cum laude
+      cfu: 6
+      date: 18-04-2024
+    - name: Intelligent Systems for Industry, Supply Chain and Environment
+      grade: 30 cum laude
+      cfu: 6
+      date: 07-02-2024
+    - name: Biometric Systems
+      grade: 29
+      cfu: 6
+      date: 22-01-2024
+    - name: Economic, Ethical, Social, and Legal Aspects of the IT Profession
+      grade: Pass
+      cfu: 3
+      date: 16-01-2024
+    - name: Secure Software Design
+      grade: 30
+      cfu: 6
+      date: 10-01-2024
+    - name: Cryptography
+      grade: 29
+      cfu: 6
+      date: 08-09-2023
+    - name: Computer Networks
+      grade: 30 cum laude
+      cfu: 12
+      date: 26-06-2023
+    - name: Databases
+      grade: 30 cum laude
+      cfu: 12
+      date: 30-05-2023
+    - name: Statistics and Data Analysis
+      grade: 30 cum laude
+      cfu: 6
+      date: 22-02-2023
+    - name: Operating Systems II
+      grade: 28
+      cfu: 6
+      date: 31-01-2023
+    - name: Operating Systems I
+      grade: 28
+      cfu: 6
+      date: 31-01-2023
+    - name: Algorithms and Data Structures
+      grade: 30
+      cfu: 12
+      date: 16-01-2023
+    - name: Organizational and Management Aspects of Cybersecurity
+      grade: 25
+      cfu: 6
+      date: 08-07-2022
+    - name: Web and Mobile Programming
+      grade: 27
+      cfu: 6
+      date: 30-06-2022
+    - name: Programming
+      grade: 30 cum laude
+      cfu: 12
+      date: 22-06-2022
+    - name: Continuous Mathematics
+      grade: 25
+      cfu: 12
+      date: 17-06-2022
+    - name: Computer Criminal Law
+      grade: 28
+      cfu: 6
+      date: 15-06-2022
+    - name: Discrete Mathematics
+      grade: 28
+      cfu: 6
+      date: 24-02-2022
+    - name: Computer Architecture
+      grade: 30 cum laude
+      cfu: 6
+      date: 18-01-2022
+    - name: English Language Assessment
+      grade: Pass
+      cfu: 3
+      date: 17-11-2021
+    - name: B1 English Level
+      grade: Pass
+      cfu: 0
+      date: 17-11-2021

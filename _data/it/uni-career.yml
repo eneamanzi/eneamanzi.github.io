@@ -1,0 +1,171 @@
+- university: Laurea Magistrale in Cyber Security
+  average: "29.23 / 30"
+  cfu: "81 / 120"
+  status: "In corso"
+  exams:
+    - name: Gestione della Sicurezza nelle Imprese
+      grade: 30 e Lode
+      cfu: 6
+      date: 01-04-2026
+    - name: Trattamento dei Dati Sensibili
+      grade: 25
+      cfu: 6
+      date: 19-12-2025
+    - name: Cloud Computing Technologies
+      grade: 30 e Lode
+      cfu: 6
+      date: 11-12-2025
+    - name: Sicurezza delle Reti II
+      grade: 30
+      cfu: 6
+      date: 10-09-2025
+    - name: Complementi di Sicurezza e Privatezza
+      grade: 30
+      cfu: 6
+      date: 07-07-2025
+    - name: Sicurezza delle Architetture Orientate ai Servizi
+      grade: 30 e Lode
+      cfu: 6
+      date: 24-06-2025
+    - name: Tecniche di Protezione del Software
+      grade: 28
+      cfu: 6
+      date: 23-06-2025
+    - name: Modellazione e Analisi di Sistemi
+      grade: 30
+      cfu: 6
+      date: 27-05-2025
+    - name: Analisi e Gestione del Rischio
+      grade: 27
+      cfu: 6
+      date: 19-02-2025
+    - name: Logica
+      grade: 30 e Lode
+      cfu: 6
+      date: 22-01-2025
+    - name: Affidabilità dei Sistemi (Dependability)
+      grade: 30
+      cfu: 6
+      date: 15-01-2025
+    - name: Complementi di Biometria
+      grade: 30
+      cfu: 6
+      date: 13-01-2025
+    - name: Privatezza e Protezione Dati
+      grade: 30 e Lode
+      cfu: 6
+      date: 11-12-2024
+    - name: Accertamento Lingua Inglese
+      grade: Approvato
+      cfu: 3
+      date: 05-12-2024
+
+- university: Laurea Triennale in Sicurezza dei Sistemi e delle Reti
+  average: "28.92 / 30"
+  cfu: "180 / 180"
+  status: "Conseguita"
+  exams:
+    - name: Prova Finale
+      grade: Approvato
+      cfu: 3
+      date: 22-10-2024
+    - name: Stage Finale
+      grade: Approvato
+      cfu: 15
+      date: 27-09-2024
+    - name: Sicurezza nei Sistemi Web e Mobili
+      grade: 30 e Lode
+      cfu: 6
+      date: 08-07-2024
+    - name: Computer Forensics
+      grade: 30 e Lode
+      cfu: 6
+      date: 05-07-2024
+    - name: Intelligenza Artificiale I
+      grade: 30 e Lode
+      cfu: 6
+      date: 17-06-2024
+    - name: Sicurezza dei Sistemi e delle Reti
+      grade: 30 e Lode
+      cfu: 6
+      date: 18-04-2024
+    - name: Intelligent Systems for Industry, Supply Chain and Environment
+      grade: 30 e Lode
+      cfu: 6
+      date: 07-02-2024
+    - name: Sistemi Biometrici
+      grade: 29
+      cfu: 6
+      date: 22-01-2024
+    - name: Aspetti Economici, Etici, Sociali e Legali Connessi alla Professione
+      grade: Approvato
+      cfu: 3
+      date: 16-01-2024
+    - name: Progettazione di Software Sicuro
+      grade: 30
+      cfu: 6
+      date: 10-01-2024
+    - name: Crittografia
+      grade: 29
+      cfu: 6
+      date: 08-09-2023
+    - name: Reti di Calcolatori
+      grade: 30 e Lode
+      cfu: 12
+      date: 26-06-2023
+    - name: Basi di Dati
+      grade: 30 e Lode
+      cfu: 12
+      date: 30-05-2023
+    - name: Statistica e Analisi dei Dati
+      grade: 30 e Lode
+      cfu: 6
+      date: 22-02-2023
+    - name: Sistemi Operativi II
+      grade: 28
+      cfu: 6
+      date: 31-01-2023
+    - name: Sistemi Operativi I
+      grade: 28
+      cfu: 6
+      date: 31-01-2023
+    - name: Algoritmi e Strutture Dati
+      grade: 30
+      cfu: 12
+      date: 16-01-2023
+    - name: Aspetti Organizzativi e Gestionali della Cybersecurity
+      grade: 25
+      cfu: 6
+      date: 08-07-2022
+    - name: Programmazione Web e Mobile
+      grade: 27
+      cfu: 6
+      date: 30-06-2022
+    - name: Programmazione
+      grade: 30 e Lode
+      cfu: 12
+      date: 22-06-2022
+    - name: Matematica del Continuo
+      grade: 25
+      cfu: 12
+      date: 17-06-2022
+    - name: Diritto Penale dell'Informatica
+      grade: 28
+      cfu: 6
+      date: 15-06-2022
+    - name: Matematica del Discreto
+      grade: 28
+      cfu: 6
+      date: 24-02-2022
+    - name: Architettura degli Elaboratori
+      grade: 30 e Lode
+      cfu: 6
+      date: 18-01-2022
+    - name: Accertamento Lingua Inglese
+      grade: Approvato
+      cfu: 3
+      date: 17-11-2021
+    - name: Livello B1 Inglese
+      grade: Approvato
+      cfu: 0
+      date: 17-11-2021
