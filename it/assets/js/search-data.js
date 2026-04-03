@@ -30,19 +30,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-libreria",
-          title: "Libreria",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/libri/";
-          },
-        },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/it/the_godfather.html";
-            },},{id: "projects-exhibition-webapp",
+        },{id: "projects-exhibition-webapp",
           title: 'Exhibition Webapp',
           description: "TODO A dynamic web application serving as a digital portfolio.",
           section: "Projects",handler: () => {
@@ -52,16 +40,6 @@ ninja.data = [{
           description: "TODO Developed a multi-threaded FTP-compliant client-server application in C for file transfer, fully interoperable with FileZilla.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/it/ftp-server.html";
-            },},{id: "projects-template-back-ground-image",
-          title: 'Template Back Ground Image',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/it/template-bg-image.html";
-            },},{id: "projects-template-redirect-site",
-          title: 'Template Redirect Site',
-          description: "a project that redirects to another website",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/it/template-redirect-site.html";
             },},{
         id: 'social-email',
         title: 'email',
