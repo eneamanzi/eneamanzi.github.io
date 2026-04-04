@@ -2,15 +2,16 @@
 layout: page
 title: Art Gallery Exhibition Web App
 description: Full-stack web app for managing and showcasing artworks. Node.js/Express backend, MongoDB storage, and a protected admin panel with authentication.
+subtitle: "Node.js · MongoDB · A.Y. 2021-2022"
 img: assets/img/exhibition-webapp.png
 importance: 5
 category: University
 page_id: exhibition-webapp
 lang: en
 permalink: /projects/exhibition-webapp/
+toc:
+  sidebar: left
 ---
-
-# Art Gallery Exhibition Web App
 
 A full-stack web app for managing and displaying a catalog of artworks, developed for the **Web and Mobile Programming** course (A.Y. 2021-2022). The application supports two user roles: a visitor who browses the public gallery, and an admin who manages content through a protected panel.
 

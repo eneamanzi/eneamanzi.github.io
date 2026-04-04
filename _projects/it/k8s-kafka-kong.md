@@ -2,12 +2,16 @@
 layout: page
 title: Infrastruttura IoT su Kubernetes
 description: Infrastruttura Kubernetes cloud-native per il monitoraggio IoT, basata su Apache Kafka KRaft, Kong API Gateway e MongoDB Time Series Collections.
+subtitle: "Kubernetes · Kafka · Kong · A.A. 2025-2026"
 img: assets/img/kubernetes.svg
 importance: 1
 category: University
 page_id: k8s-kafka-kong
 lang: it
 permalink: /projects/k8s-kafka-kong/
+pretty_table: true
+toc:
+  sidebar: left
 ---
 
 Un'architettura a microservizi **event-driven** e cloud-native per il monitoraggio IoT industriale, progettata e distribuita su Kubernetes. Progetto per il corso di *Cloud Computing Technologies* (A.A. 2025/2026).

@@ -2,16 +2,17 @@
 layout: page
 title: FTP Server in C – FileZilla Compatible
 description: FTP server written in C with active and passive mode support, user authentication, and directory management. University computer networks project.
+subtitle: "C · Computer Networks · A.Y. 2022-2023"
 img: assets/img/ftp.png
 importance: 2
 category: University
 page_id: ftp-server
 lang: en
 permalink: /projects/ftp-server/
+pretty_table: true
+toc:
+  sidebar: left
 ---
-
-
-# FTP Server in C
 
 A fully functional FTP server written in C, built to be compatible with the **FileZilla** client. Developed as part of a Computer Networks course project (A.Y. 2022-2023), it covers the core FTP protocol operations defined in [RFC 959](https://www.rfc-editor.org/rfc/rfc959).
 

@@ -2,15 +2,17 @@
 layout: page
 title: Client FTP compatibile con FileZilla Server
 description: Client FTP scritto in C che implementa i principali comandi del protocollo FTP per interagire con FileZilla Server. Progetto universitario di reti.
+subtitle: "C · Reti di Calcolatori · A.A. 2022-2023"
 img: assets/img/ftp-client.png
 importance: 2
 category: University
 page_id: ftp-client
 lang: it
 permalink: /projects/ftp-client/
+pretty_table: true
+toc:
+  sidebar: left
 ---
-
-# Client FTP in C
 
 Client FTP scritto in C, progettato per comunicare con **FileZilla Server** seguendo le specifiche del protocollo FTP. Realizzato come progetto universitario per il corso di Reti di Calcolatori (A.A. 2022-2023), implementa i comandi fondamentali per gestire sessioni, file e directory in modo conforme allo standard.
 

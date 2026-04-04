@@ -2,15 +2,17 @@
 layout: page
 title: Data-Driven CV with LaTeX, Lua & GitHub Actions
 description: Bilingual CV and cover letter generated from a single JSON source using LaTeX and Lua. Automated compilation and deployment via GitHub Actions.
+subtitle: "LaTeX · Lua · GitHub Actions"
 img: assets/img/cv.png 
 importance: 2
 category: Personal
 page_id: cv-automation
 lang: en
 permalink: /projects/cv-automation/
+pretty_table: true
+toc:
+  sidebar: left
 ---
-
-# Data-Driven Curriculum Vitae
 
 An automated system for generating a Curriculum Vitae and cover letter in both Italian and English. Built on **LaTeX** with the `moderncv` class, but rethought from the inside: content is fully separated from presentation and lives in a single `data.json` file.
 

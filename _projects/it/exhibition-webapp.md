@@ -2,15 +2,16 @@
 layout: page
 title: Web App per Galleria d'Arte
 description: Web app full-stack per la gestione e l'esposizione di opere d'arte. Backend Node.js/Express, MongoDB e area admin protetta con autenticazione.
+subtitle: "Node.js · MongoDB · A.A. 2021-2022"
 img: assets/img/exhibition-webapp.png
 importance: 5
 category: University
 page_id: exhibition-webapp
 lang: it
 permalink: /projects/exhibition-webapp/
+toc:
+  sidebar: left
 ---
-
-# Web App per Galleria d'Arte
 
 Web app full-stack per la gestione e l'esposizione di un catalogo di opere d'arte, sviluppata per il corso di **Programmazione Web e Mobile** (A.A. 2021-2022). L'applicazione distingue due tipologie di utente: il visitatore, che naviga la galleria pubblica, e l'admin, che gestisce il contenuto tramite un pannello protetto.
 

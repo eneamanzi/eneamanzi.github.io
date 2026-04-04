@@ -1,0 +1,87 @@
+/*******************************************************************************
+ * Project detail page styles
+ ******************************************************************************/
+
+// Short display subtitle (different from SEO description)
+.post-subtitle {
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+  font-family: monospace;
+  letter-spacing: 0.03em;
+  margin-top: -0.75rem;
+  margin-bottom: 2rem;
+}
+
+// Article content inside project pages
+.post-content {
+
+  // ── Section headings ──────────────────────────────────────────────────────
+
+  h2 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--global-divider-color);
+    color: var(--global-text-color);
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.6rem;
+    color: var(--global-theme-color);
+  }
+
+  // ── Lists ─────────────────────────────────────────────────────────────────
+
+  ul {
+    padding-left: 1.4rem;
+
+    li {
+      margin-bottom: 0.35rem;
+      line-height: 1.6;
+    }
+  }
+
+  // ── Code blocks ───────────────────────────────────────────────────────────
+
+  pre {
+    border-radius: 6px;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    margin: 1.25rem 0;
+  }
+
+  // ── GitHub / external link button ─────────────────────────────────────────
+
+  p>a:only-child[href*="github.com"],
+  p>a:only-child[href*="github.com"]:visited {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 1.25rem;
+    padding: 0.4rem 1.1rem;
+    border: 1.5px solid var(--global-theme-color);
+    border-radius: 5px;
+    color: var(--global-theme-color);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.15s ease, color 0.15s ease;
+
+    &::before {
+      font-family: "Font Awesome 6 Brands";
+      content: "\f09b";
+      font-size: 1rem;
+    }
+
+    &:hover {
+      background-color: var(--global-theme-color);
+      color: var(--global-hover-text-color);
+      text-decoration: none;
+    }
+  }
+}
