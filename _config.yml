@@ -84,7 +84,6 @@ google_site_verification: _ybgqp15m9ukW-jOwmlr56m-S002Jvjb7iUp57SaXvM
 collections:
   projects:
     output: true
-  # books:          # Archiviato in _miei_template/ — decommentare per riattivare
   #   output: true
 
 # -----------------------------------------------------------------------------
@@ -126,7 +125,6 @@ exclude:
   - README.md
   - readme_preview/
   - vendor
-  - _miei_template # Archivio template — non processare
   - TODO.md
 keep_files:
   - CNAME

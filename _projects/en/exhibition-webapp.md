@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Exhibition Webapp
-description: A dynamic web application serving as a digital portfolio.
+title: Art Gallery Exhibition Web App
+description: Full-stack web app for managing and showcasing artworks. Node.js/Express backend, MongoDB storage, and a protected admin panel with authentication.
 img: assets/img/exhibition-webapp.png
 importance: 5
 category: University
@@ -10,15 +10,41 @@ lang: en
 permalink: /projects/exhibition-webapp/
 ---
 
-This project was developed for the **Web and Mobile Programming** course (A.Y. 2021-2022).
+# Art Gallery Exhibition Web App
 
-It consists of a **dynamic web application** designed to serve as a digital portfolio for displaying multimedia content.
+A full-stack web app for managing and displaying a catalog of artworks, developed for the **Web and Mobile Programming** course (A.Y. 2021-2022). The application supports two user roles: a visitor who browses the public gallery, and an admin who manages content through a protected panel.
 
-### Key Features
-* **Full Stack Development:** Developed the backend with **Node.js** and **Express**, and the frontend with **HTML5**, **CSS3**, and **JavaScript/jQuery**.
-* **Database:** Integrated **MongoDB** for document-oriented storage.
-* **Communication:** Implemented **AJAX** for asynchronous client-server communication (handling GET, POST, and DELETE requests).
-* **Version Control:** Managed source code and collaboration using **Git** and **GitHub**.
+## Two Roles, Two Experiences
 
-### Key Skills
-Node.js, Express, MongoDB, AJAX, REST APIs, jQuery, Git.
+### Visitor (public)
+
+Can browse the painting gallery, open the detail view of each artwork with a full photo and description, and navigate between sections via a shared navigation bar.
+
+### Admin (protected)
+
+Logs in via bcrypt-hashed password authentication and manages artworks directly from the browser: adding new paintings with image upload, editing titles and descriptions, and deleting works with a confirmation prompt. All operations happen without page reload, through asynchronous **AJAX** calls to the server.
+
+## Architecture
+
+The backend is a **Node.js/Express** server that exposes REST routes (GET, POST, PUT, DELETE) and manages user sessions. Painting data - title, description, date, and image path - is stored in **MongoDB** through **Mongoose** schemas. The frontend communicates with the server exclusively via AJAX, building the DOM dynamically from the received data.
+
+```
+Browser  →  AJAX GET /getList  →  Express  →  MongoDB  →  JSON response  →  DOM update
+```
+
+Image uploads are handled by **Multer**, which saves files on the server and stores the corresponding path in the MongoDB document.
+
+## Technical Highlights
+
+**Authentication and sessions** - login verifies the password using bcrypt and maintains admin state via `express-session`. Admin routes are protected: without an active session, every request is rejected.
+
+**Shared components** - the navbar and footer are separate HTML files, dynamically loaded via jQuery across all pages, avoiding code duplication.
+
+**Performance** - static images are compressed up to 75% of their original size, and scripts are placed at the bottom of the body to avoid blocking rendering. All pages are validated through the W3C Validator.
+
+## Tech Stack
+
+- **Backend:** Node.js, Express, express-session, Multer, bcrypt, Mongoose
+- **Database:** MongoDB
+- **Frontend:** HTML5, CSS3, JavaScript, AJAX, jQuery, Bootstrap
+- **Version control:** Git / GitHub

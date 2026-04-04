@@ -4,7 +4,7 @@ title: Carriera Accademica
 lang: it
 permalink: /carriera/
 page_id: career
-description: Il mio percorso accademico, gli esami sostenuti e i risultati ottenuti.
+description: "Carriera accademica di Enea Manzi in Cyber Security e Sicurezza dei Sistemi e delle Reti all'Università degli Studi di Milano. Media ponderata: 28.92 (Triennale) e 29.23 (Magistrale, in corso)."
 nav: true
 nav_order: 5
 ---

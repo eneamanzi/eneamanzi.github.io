@@ -32,6 +32,10 @@ latest_posts:
 
 Hi! My name is **Enea Manzi**.
 
-I have a Bachelor's degree in **System and Network Security** from the **University of Milan** and I am currently studying for a Master's degree in **Cyber Security**.
+I am a **Cyber Security** M.Sc. student at the **University of Milan**, with a Bachelor's degree in **System and Network Security** (110/110 cum laude).
+
+My focus areas include **Cloud Security**, **Network Security**, **Risk Management**, and **Privacy & Data Protection (GDPR)**.
+
+I have hands-on experience with **Kubernetes**, **Docker**, **REST APIs**, and **Linux administration**, developed during my academic projects and a curricular internship at **SESAR Lab** (University of Milan).
 
 I speak **Italian** (Native) and **English** (B2).

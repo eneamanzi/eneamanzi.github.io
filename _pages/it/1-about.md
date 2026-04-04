@@ -32,8 +32,10 @@ latest_posts:
 
 Ciao! Mi chiamo **Enea Manzi**.
 
-Ho una laurea triennale in **Sicurezza dei Sistemi e delle Reti** presso l'**Università degli Studi di Milano** e attualmente sto studiando per una laurea magistrale in **Cyber Security**.
+Sono uno studente magistrale in **Cyber Security** all'**Università degli Studi di Milano**, con una laurea triennale in **Sicurezza dei Sistemi e delle Reti** (110/110 con lode).
+
+Le mie aree di interesse includono **Cloud Security**, **Sicurezza delle Reti**, **Gestione del Rischio** e **Privacy & Protezione dei Dati (GDPR)**.
+
+Ho esperienza pratica con **Kubernetes**, **Docker**, **REST API** e **amministrazione Linux**, maturata nei progetti universitari e in uno stage curriculare presso il **SESAR Lab** (Università degli Studi di Milano).
 
 Parlo **italiano** (Madrelingua) e **inglese** (B2).
-
-***

@@ -4,7 +4,7 @@ title: Academic Career
 lang: en
 permalink: /career/
 page_id: career
-description: My academic journey, coursework, and grades.
+description: "Enea Manzi's academic record in Cyber Security and System & Network Security at the University of Milan. Weighted average: 28.92 (Bachelor) and 29.23 (Master, in progress)."
 nav: true
 nav_order: 5
 ---
