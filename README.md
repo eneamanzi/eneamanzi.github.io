@@ -1,3 +1,4 @@
+[English version](README.en.md) | **Versione Italiana**
 # Portfolio di Enea Manzi
 
 Questo è il repository del mio sito web personale e portfolio professionale.
