@@ -1,5 +1,6 @@
 ---
 layout: book-review
+published: false
 title: The Godfather
 author: Mario Puzo
 cover: assets/img/book_covers/the_godfather.jpg

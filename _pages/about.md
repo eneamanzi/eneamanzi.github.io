@@ -1,19 +1,18 @@
 ---
 layout: about
-title: about
+title: About Me
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Cyber Security Researcher & Software Developer
+description: "Personal portfolio of Enea Manzi, Cyber Security Researcher and M.Sc. graduate (University of Milan). Projects in Kubernetes, C, network security, and more."
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: cv_pic_resized.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Bellano, Italy</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
@@ -22,13 +21,15 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hi! I'm **Enea Manzi**, a Cyber Security graduate working on **security assurance for distributed and service-oriented systems** at **SESAR Lab** (Secure Service-oriented Architectures Research Lab), University of Milan.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My research addresses the **oracle problem** in automated security testing: how to establish trust in an automated verdict when checking a system for security violations. My Master's thesis, _APIGuard Assurance_, proposes a **contract-driven, API-agnostic methodology** that derives all target knowledge from the OpenAPI Specification, organizing security checks into a taxonomy of eight domains traceable to OWASP and CWE. This work is the basis of a paper submitted to **ITADATA 2026**. Earlier, during my Bachelor's thesis, I contributed to an **Assurance Engine** for verifying non-functional properties (CIA triad, reliability, scalability) in Edge-Cloud Continuum systems, deployed on Kubernetes.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I hold a **Master's Degree in Cyber Security** and a **Bachelor's Degree in System and Network Security**, both from the University of Milan, both **110/110 cum laude**. I am currently applying for a **PhD position at SESAR Lab** to continue this line of research.
+
+I work primarily with **Python**, **Rust**, **Kubernetes**, and **Kafka**, and I speak Italian (native) and English (B2).
