@@ -236,10 +236,10 @@
                 <tr>
                   <td class="p-1 pr-2 font-weight-bold"><b>Location</b></td>
                   <td class="p-1 pl-2 font-weight-light">
-                    {% if basics.location.address %}{{ basics.location.address }}, {% endif %}
-                    {% if basics.location.city %}{{ basics.location.city }}, {% endif %}
-                    {% if basics.location.region %}{{ basics.location.region }} {% endif %}
-                    {% if basics.location.postalCode %}{{ basics.location.postalCode }}{% endif %}
+                    {% if basics.location.address != '' %}{{ basics.location.address }}, {% endif %}
+                    {% if basics.location.city != '' %}{{ basics.location.city }}, {% endif %}
+                    {% if basics.location.region != '' %}{{ basics.location.region }} {% endif %}
+                    {% if basics.location.postalCode != '' %}{{ basics.location.postalCode }}{% endif %}
                   </td>
                 </tr>
               {% endif %}
@@ -303,14 +303,14 @@
           </div>
         {% endif %}
 
-        <!-- Awards -->
-        {% if site.data.resume.awards.size > 0 %}
-          <a class="anchor" id="awards"></a>
+        <!-- Projects -->
+        {% if site.data.resume.projects.size > 0 %}
+          <a class="anchor" id="projects"></a>
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Awards</h3>
+            <h3 class="card-title font-weight-medium">Projects</h3>
             <div>
-              {% assign entries = site.data.resume.awards %}
-              {% include cv/awards.liquid %}
+              {% assign entries = site.data.resume.projects %}
+              {% include cv/projects.liquid %}
             </div>
           </div>
         {% endif %}
@@ -327,6 +327,18 @@
           </div>
         {% endif %}
 
+        <!-- Languages -->
+        {% if site.data.resume.languages.size > 0 %}
+          <a class="anchor" id="languages"></a>
+          <div class="card mt-3 p-3">
+            <h3 class="card-title font-weight-medium">Languages</h3>
+            <div>
+              {% assign entries = site.data.resume.languages %}
+              {% include cv/languages.liquid %}
+            </div>
+          </div>
+        {% endif %}
+
         <!-- Skills -->
         {% if site.data.resume.skills.size > 0 %}
           <a class="anchor" id="skills"></a>
@@ -339,14 +351,27 @@
           </div>
         {% endif %}
 
-        <!-- Languages -->
-        {% if site.data.resume.languages.size > 0 %}
-          <a class="anchor" id="languages"></a>
+        <!-- Soft Skills (custom section, not part of the JSONResume standard;
+             split out from Skills to mirror the PDF, which treats it as its own section) -->
+        {% if site.data.resume.softSkills.size > 0 %}
+          <a class="anchor" id="soft-skills"></a>
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Languages</h3>
+            <h3 class="card-title font-weight-medium">Soft Skills</h3>
             <div>
-              {% assign entries = site.data.resume.languages %}
-              {% include cv/languages.liquid %}
+              {% assign entries = site.data.resume.softSkills %}
+              {% include cv/skills.liquid %}
+            </div>
+          </div>
+        {% endif %}
+
+        <!-- Awards -->
+        {% if site.data.resume.awards.size > 0 %}
+          <a class="anchor" id="awards"></a>
+          <div class="card mt-3 p-3">
+            <h3 class="card-title font-weight-medium">Awards</h3>
+            <div>
+              {% assign entries = site.data.resume.awards %}
+              {% include cv/awards.liquid %}
             </div>
           </div>
         {% endif %}
@@ -371,18 +396,6 @@
             <div>
               {% assign entries = site.data.resume.certificates %}
               {% include cv/certificates.liquid %}
-            </div>
-          </div>
-        {% endif %}
-
-        <!-- Projects -->
-        {% if site.data.resume.projects.size > 0 %}
-          <a class="anchor" id="projects"></a>
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Projects</h3>
-            <div>
-              {% assign entries = site.data.resume.projects %}
-              {% include cv/projects.liquid %}
             </div>
           </div>
         {% endif %}

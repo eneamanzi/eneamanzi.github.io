@@ -1,0 +1,49 @@
+{% comment %}
+  LOCAL OVERRIDE of al_folio_cv's templates/cv/skills.liquid (loaded via Jekyll's
+  includes_load_paths, same mechanism as render.liquid/research.liquid).
+  Two changes vs upstream:
+  1. `level`/`icon` checks use `!= ''` instead of truthy, so an empty string
+     (Liquid treats "" as truthy) no longer prints a stray empty "()" or <i></i>.
+  2. "Soft Skills" gets a per-item rendering (bold label : content, one per line),
+     mirroring the LaTeX CV's print_skills special-case for that category, instead
+     of the generic comma-joined keyword list.
+{% endcomment %}
+
+<div class="card-text font-weight-light">
+  {% for entry in entries %}
+    {% if entry.name == "Soft Skills" %}
+      {% for keyword in entry.keywords %}
+        {% assign label = keyword | split: ": " | first %}
+        {% assign content = keyword | remove_first: label | remove_first: ": " %}
+        <div class="skill-item">
+          <strong>{{ label }}:</strong> {{ content }}
+        </div>
+      {% endfor %}
+    {% else %}
+      <div class="skill-item">
+        {% if entry.icon != '' %}
+          <i class="{{ entry.icon }}"></i>
+        {% endif %}
+        <strong>
+          {{- entry.name -}}
+          {%- if entry.level != '' %} ({{ entry.level }}){% endif %}:</strong
+        >
+        {% if entry.keywords %}
+          {% for keyword in entry.keywords %}
+            {% if forloop.last %}
+              {{ keyword }}
+            {% else %}
+              {{ keyword }},
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<style>
+  .skill-item {
+    padding: 0.5rem 0;
+  }
+</style>
