@@ -42,5 +42,9 @@ jobs:
           git diff --staged --quiet || (
             echo "📤 New project page(s) scaffolded, committing..."
             git commit -m "Scaffold project page(s) from resume.json"
+            # rebase before pushing: the Curriculum-Vitae repo's own workflows
+            # may push to this same branch (a different file) around the same
+            # time, so main may have moved since checkout.
+            git pull --rebase
             git push
           )
