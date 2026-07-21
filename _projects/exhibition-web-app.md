@@ -1,17 +1,27 @@
 ---
 layout: page
 title: Exhibition Web App
-description: Full-stack web app for managing and showcasing artworks. Node.js/Express backend, MongoDB storage, and a protected admin panel with authentication.
-subtitle: "Node.js · MongoDB · A.Y. 2021-2022"
+description: Built a dynamic web application serving as a digital portfolio for displaying multimedia content.
 img:
-importance: 5
+importance: 40
 category: Academic
-permalink: /projects/exhibition-webapp/
+permalink: /projects/exhibition-web-app/
+cv_id: exhibition-web-app
 toc:
   sidebar: left
 ---
 
-A full-stack web app for managing and displaying a catalog of artworks, developed for the **Web and Mobile Programming** course (A.Y. 2021-2022). The application supports two user roles: a visitor who browses the public gallery, and an admin who manages content through a protected panel.
+<!-- Scaffolded from the CV's data (single source of truth) - expand with the
+     full write-up below the Summary section. -->
+
+## Summary (from CV)
+
+*Web and Mobile Programming Course Project (A.Y. 2021-2022)*
+
+- Developed the backend with *Node.js/Express* and the frontend with *HTML5*, *CSS3*, *JavaScript/jQuery*.
+- Integrated *MongoDB* for document-oriented storage and *AJAX* for asynchronous client-server communication (GET, POST, DELETE).
+- Managed source code and collaboration using **Git** and **GitHub**.
+- **Key skills:** *Node.js*, *Express*, *MongoDB*, *AJAX*, *REST APIs*, *jQuery*, **Git**.
 
 ## Two Roles, Two Experiences
 

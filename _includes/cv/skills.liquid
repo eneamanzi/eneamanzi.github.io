@@ -11,10 +11,10 @@
 
 <div class="card-text font-weight-light">
   {% for entry in entries %}
-    {% if entry.name == "Soft Skills" %}
+    {% if entry.name == 'Soft Skills' %}
       {% for keyword in entry.keywords %}
-        {% assign label = keyword | split: ": " | first %}
-        {% assign content = keyword | remove_first: label | remove_first: ": " %}
+        {% assign label = keyword | split: ': ' | first %}
+        {% assign content = keyword | remove_first: label | remove_first: ': ' %}
         <div class="skill-item">
           <strong>{{ label }}:</strong> {{ content }}
         </div>

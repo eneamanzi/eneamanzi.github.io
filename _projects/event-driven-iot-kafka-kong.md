@@ -1,18 +1,27 @@
 ---
 layout: page
 title: Event-Driven IoT Architecture (Kafka + Kong)
-description: Cloud-native Kubernetes infrastructure for IoT monitoring, built with Apache Kafka KRaft, Kong API Gateway, and MongoDB Time Series Collections.
-subtitle: "Kubernetes · Kafka · Kong · A.Y. 2025-2026"
+description: Development of a cloud-native microservices infrastructure on Kubernetes for IoT ingestion and monitoring, with a particular focus on non-functional properties such as scalability, fault tolerance, and edge-to-core security.
 img:
-importance: 1
+importance: 20
 category: Academic
-permalink: /projects/k8s-kafka-kong/
-pretty_table: true
+permalink: /projects/event-driven-iot-kafka-kong/
+cv_id: event-driven-iot-kafka-kong
 toc:
   sidebar: left
 ---
 
-A cloud-native, event-driven microservices architecture for industrial IoT monitoring, built and deployed on Kubernetes. Course project for _Cloud Computing Technologies_ (A.Y. 2025/2026).
+<!-- Scaffolded from the CV's data (single source of truth) - expand with the
+     full write-up below the Summary section. -->
+
+## Summary (from CV)
+
+*Cloud Computing Technologies Course Project (A.Y. 2025/2026)*
+
+- Microservices architecture based on **Apache Kafka** in KRaft mode (ZooKeeper-less) for asynchronous decoupling and reliable message handling (*Zero Data Loss*).
+- Integration of **Kong API Gateway** to implement the *Gateway Offloading* pattern, centralizing Authentication (API Key), Rate Limiting, and Load Balancing at the edge.
+- Storage layer optimized on **MongoDB** using **Time Series Collections** and hybrid compression (LZ4/Zstd) to maximize storage efficiency and analytical performance.
+- Full **Kubernetes** orchestration managed via **Helm**, featuring automatic scalability (HPA) and advanced security (Secrets, TLS/SASL) to meet non-functional requirements.
 
 ## Architecture Overview
 
@@ -37,7 +46,7 @@ The entire configuration is **Infrastructure as Code** via Kubernetes CRDs - no 
 Kafka runs in **KRaft mode** (no ZooKeeper), reducing operational complexity and attack surface. Two dedicated topic strategies handle different QoS requirements:
 
 | Topic              | Partitions | Compression | Retention | Guarantee                                 |
-| ------------------ | ---------- | ----------- | --------- | ----------------------------------------- |
+| ------------------ | ---------- | ----------- | --------- | ------------------------------------------------ |
 | `sensor-telemetry` | 3          | LZ4         | 7 days    | At-least-once                             |
 | `sensor-alerts`    | 2          | -           | 30 days   | Zero Data Loss (`min.insync.replicas: 2`) |
 
@@ -64,7 +73,7 @@ Three stateless/stateful services handle the full pipeline:
 ## Non-Functional Properties
 
 | Property            | Implementation                                                                          |
-| ------------------- | --------------------------------------------------------------------------------------- |
+| ------------------- | ---------------------------------------------------------------------------------------------- |
 | **Security**        | TLS on port 9093, SASL/SCRAM-SHA-512, Kubernetes Secrets (no hardcoded credentials)     |
 | **Fault Tolerance** | Kafka as async buffer; consumer crash → messages preserved → zero data loss on recovery |
 | **Self-Healing**    | Kubernetes restarts crashed pods automatically                                          |

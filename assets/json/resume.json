@@ -66,9 +66,7 @@
       "endDate": "2021-06-01",
       "score": "93/100",
       "courses": [],
-      "highlights": [
-        "Final Grade: 93/100"
-      ]
+      "highlights": ["Final Grade: 93/100"]
     }
   ],
   "work": [
@@ -101,9 +99,7 @@
       "startDate": "2020-01-01",
       "endDate": "2020-02-01",
       "summary": "High school work-based-learning",
-      "highlights": [
-        "Developed a web application using HTML, JavaScript, and jQuery as part of a high school work-based learning program (PCTO)."
-      ]
+      "highlights": ["Developed a web application using HTML, JavaScript, and jQuery as part of a high school work-based learning program (PCTO)."]
     }
   ],
   "research": [
@@ -146,16 +142,11 @@
         "Built **reproducible packages** with **Hatch**, verifying identical SHA-256 hashes across repeated builds.",
         "Designed an **extensible** connector architecture to integrate external security scanners, decoupling test logic from tool-specific output parsing."
       ],
-      "keywords": [
-        "Python",
-        "Pydantic",
-        "mypy",
-        "OpenAPI",
-        "Kong",
-        "Docker",
-        "Static Analysis",
-        "Hatch/pyproject.toml"
-      ]
+      "keywords": ["Python", "Pydantic", "mypy", "OpenAPI", "Kong", "Docker", "Static Analysis", "Hatch/pyproject.toml"],
+      "course": "Master's Thesis Project (A.Y. 2025/2026)",
+      "category": "Academic",
+      "id": "apiguard-assurance",
+      "importance": 10
     },
     {
       "name": "Event-Driven IoT Architecture (Kafka + Kong)",
@@ -166,15 +157,11 @@
         "Storage layer optimized on **MongoDB** using **Time Series Collections** and hybrid compression (LZ4/Zstd) to maximize storage efficiency and analytical performance.",
         "Full **Kubernetes** orchestration managed via **Helm**, featuring automatic scalability (HPA) and advanced security (Secrets, TLS/SASL) to meet non-functional requirements."
       ],
-      "keywords": [
-        "Kubernetes",
-        "Kafka (Strimzi)",
-        "Kong Gateway",
-        "MongoDB",
-        "Helm",
-        "Python",
-        "Docker"
-      ]
+      "keywords": ["Kubernetes", "Kafka (Strimzi)", "Kong Gateway", "MongoDB", "Helm", "Python", "Docker"],
+      "course": "Cloud Computing Technologies Course Project (A.Y. 2025/2026)",
+      "category": "Academic",
+      "id": "event-driven-iot-kafka-kong",
+      "importance": 20
     },
     {
       "name": "FTP Client and Server",
@@ -185,7 +172,11 @@
         "Protocol Management: Implemented essential *FTP commands* (e.g., USER, PASS, LIST, RETR, STOR, CWD...)",
         "**Key skills:** **C**, **socket programming**, **multithreading**, **network protocols**, **FTP**, **Git**."
       ],
-      "keywords": []
+      "keywords": [],
+      "course": "Computer Networks Course Project (A.Y. 2022-2023)",
+      "category": "Academic",
+      "id": "ftp-client-server",
+      "importance": 30
     },
     {
       "name": "Exhibition Web App",
@@ -196,7 +187,11 @@
         "Managed source code and collaboration using **Git** and **GitHub**.",
         "**Key skills:** *Node.js*, *Express*, *MongoDB*, *AJAX*, *REST APIs*, *jQuery*, **Git**."
       ],
-      "keywords": []
+      "keywords": [],
+      "course": "Web and Mobile Programming Course Project (A.Y. 2021-2022)",
+      "category": "Academic",
+      "id": "exhibition-web-app",
+      "importance": 40
     }
   ],
   "publications": [
@@ -224,24 +219,13 @@
       "name": "Programming Languages",
       "level": "",
       "icon": "",
-      "keywords": [
-        "C",
-        "Java",
-        "Python",
-        "SQL",
-        "Web (HTML, JavaScript/Node.js)",
-        "OOP Concepts",
-        "low-level programming"
-      ]
+      "keywords": ["C", "Java", "Python", "SQL", "Web (HTML, JavaScript/Node.js)", "OOP Concepts", "low-level programming"]
     },
     {
       "name": "Database",
       "level": "",
       "icon": "",
-      "keywords": [
-        "MySQL",
-        "Database Design, Implementation and Adminsitration"
-      ]
+      "keywords": ["MySQL", "Database Design, Implementation and Adminsitration"]
     },
     {
       "name": "Architectures & Software",
@@ -264,32 +248,19 @@
       "name": "Operating Systems",
       "level": "",
       "icon": "",
-      "keywords": [
-        "Fresh OS installation",
-        "Linux Administration and Shell",
-        "Windows"
-      ]
+      "keywords": ["Fresh OS installation", "Linux Administration and Shell", "Windows"]
     },
     {
       "name": "Networking & Security",
       "level": "",
       "icon": "",
-      "keywords": [
-        "Network Protocols",
-        "ICT Network Security Risk",
-        "Secure Coding Practices",
-        "API Security",
-        "Continuous Security Assurance"
-      ]
+      "keywords": ["Network Protocols", "ICT Network Security Risk", "Secure Coding Practices", "API Security", "Continuous Security Assurance"]
     },
     {
       "name": "Tools",
       "level": "",
       "icon": "",
-      "keywords": [
-        "Visual Studio Code",
-        "GitHub"
-      ]
+      "keywords": ["Visual Studio Code", "GitHub"]
     }
   ],
   "softSkills": [

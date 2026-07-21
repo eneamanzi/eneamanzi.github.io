@@ -1,0 +1,35 @@
+name: Scaffold Project Pages from CV
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "assets/json/resume.json"
+  workflow_dispatch:
+
+jobs:
+  scaffold:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run project page scaffolder
+        run: |
+          echo "🔍 Checking resume.json projects against existing _projects/*.md pages..."
+          python3 scripts/scaffold_project_pages.py
+
+      - name: Configure Git
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+
+      - name: Commit and push if new pages were created
+        run: |
+          git add _projects/
+          git diff --staged --quiet || (
+            echo "📤 New project page(s) scaffolded, committing..."
+            git commit -m "Scaffold project page(s) from resume.json"
+            git push
+          )

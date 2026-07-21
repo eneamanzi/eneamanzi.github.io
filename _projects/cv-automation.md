@@ -16,13 +16,13 @@ An automated system for generating a Curriculum Vitae and cover letter in both I
 
 ## The Problem It Solves
 
-Keeping a CV up to date in two languages across separate `.tex` files means updating every piece of data twice, in two different places - with the risk of them falling out of sync. Worse, this website's own CV page used to be a *third* copy, maintained by hand and never quite in sync with the PDF. This project eliminates that redundancy entirely.
+Keeping a CV up to date in two languages across separate `.tex` files means updating every piece of data twice, in two different places - with the risk of them falling out of sync. Worse, this website's own CV page used to be a _third_ copy, maintained by hand and never quite in sync with the PDF. This project eliminates that redundancy entirely.
 
 ## How It Works
 
 ### Single Source of Truth
 
-Everything - work experience, education, skills, projects, personal info - lives under `data/`, one JSON file per domain (numbered to match render order), with lightweight Markdown (`**bold**`/`*italic*`) for emphasis instead of raw LaTeX. Updating the CV, cover letter, *and* this website's `/cv/` page means editing those files only.
+Everything - work experience, education, skills, projects, personal info - lives under `data/`, one JSON file per domain (numbered to match render order), with lightweight Markdown (`**bold**`/`*italic*`) for emphasis instead of raw LaTeX. Updating the CV, cover letter, _and_ this website's `/cv/` page means editing those files only.
 
 ### The Lua ↔ LaTeX Bridge
 
