@@ -16,12 +16,12 @@ toc:
 
 ## Summary (from CV)
 
-*Web and Mobile Programming Course Project (A.Y. 2021-2022)*
+_Web and Mobile Programming Course Project (A.Y. 2021-2022)_
 
-- Developed the backend with *Node.js/Express* and the frontend with *HTML5*, *CSS3*, *JavaScript/jQuery*.
-- Integrated *MongoDB* for document-oriented storage and *AJAX* for asynchronous client-server communication (GET, POST, DELETE).
+- Developed the backend with _Node.js/Express_ and the frontend with _HTML5_, _CSS3_, _JavaScript/jQuery_.
+- Integrated _MongoDB_ for document-oriented storage and _AJAX_ for asynchronous client-server communication (GET, POST, DELETE).
 - Managed source code and collaboration using **Git** and **GitHub**.
-- **Key skills:** *Node.js*, *Express*, *MongoDB*, *AJAX*, *REST APIs*, *jQuery*, **Git**.
+- **Key skills:** _Node.js_, _Express_, _MongoDB_, _AJAX_, _REST APIs_, _jQuery_, **Git**.
 
 ## Two Roles, Two Experiences
 

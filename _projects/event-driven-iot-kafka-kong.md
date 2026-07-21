@@ -16,10 +16,10 @@ toc:
 
 ## Summary (from CV)
 
-*Cloud Computing Technologies Course Project (A.Y. 2025/2026)*
+_Cloud Computing Technologies Course Project (A.Y. 2025/2026)_
 
-- Microservices architecture based on **Apache Kafka** in KRaft mode (ZooKeeper-less) for asynchronous decoupling and reliable message handling (*Zero Data Loss*).
-- Integration of **Kong API Gateway** to implement the *Gateway Offloading* pattern, centralizing Authentication (API Key), Rate Limiting, and Load Balancing at the edge.
+- Microservices architecture based on **Apache Kafka** in KRaft mode (ZooKeeper-less) for asynchronous decoupling and reliable message handling (_Zero Data Loss_).
+- Integration of **Kong API Gateway** to implement the _Gateway Offloading_ pattern, centralizing Authentication (API Key), Rate Limiting, and Load Balancing at the edge.
 - Storage layer optimized on **MongoDB** using **Time Series Collections** and hybrid compression (LZ4/Zstd) to maximize storage efficiency and analytical performance.
 - Full **Kubernetes** orchestration managed via **Helm**, featuring automatic scalability (HPA) and advanced security (Secrets, TLS/SASL) to meet non-functional requirements.
 
@@ -46,7 +46,7 @@ The entire configuration is **Infrastructure as Code** via Kubernetes CRDs - no 
 Kafka runs in **KRaft mode** (no ZooKeeper), reducing operational complexity and attack surface. Two dedicated topic strategies handle different QoS requirements:
 
 | Topic              | Partitions | Compression | Retention | Guarantee                                 |
-| ------------------ | ---------- | ----------- | --------- | ------------------------------------------------ |
+| ------------------ | ---------- | ----------- | --------- | ----------------------------------------- |
 | `sensor-telemetry` | 3          | LZ4         | 7 days    | At-least-once                             |
 | `sensor-alerts`    | 2          | -           | 30 days   | Zero Data Loss (`min.insync.replicas: 2`) |
 
@@ -73,7 +73,7 @@ Three stateless/stateful services handle the full pipeline:
 ## Non-Functional Properties
 
 | Property            | Implementation                                                                          |
-| ------------------- | ---------------------------------------------------------------------------------------------- |
+| ------------------- | --------------------------------------------------------------------------------------- |
 | **Security**        | TLS on port 9093, SASL/SCRAM-SHA-512, Kubernetes Secrets (no hardcoded credentials)     |
 | **Fault Tolerance** | Kafka as async buffer; consumer crash → messages preserved → zero data loss on recovery |
 | **Self-Healing**    | Kubernetes restarts crashed pods automatically                                          |

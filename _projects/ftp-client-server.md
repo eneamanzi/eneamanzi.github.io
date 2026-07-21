@@ -16,11 +16,11 @@ toc:
 
 ## Summary (from CV)
 
-*Computer Networks Course Project (A.Y. 2022-2023)*
+_Computer Networks Course Project (A.Y. 2022-2023)_
 
 - Architecture: Multi-threaded server based on **Socket Programming** for concurrent session management.
 - Data Modes: Native support for both Active (PORT) and Passive (PASV) data transfer modes.
-- Protocol Management: Implemented essential *FTP commands* (e.g., USER, PASS, LIST, RETR, STOR, CWD...)
+- Protocol Management: Implemented essential _FTP commands_ (e.g., USER, PASS, LIST, RETR, STOR, CWD...)
 - **Key skills:** **C**, **socket programming**, **multithreading**, **network protocols**, **FTP**, **Git**.
 
 ## Server
@@ -46,7 +46,7 @@ myLib.c       →  utilities: I/O, parsing, socket wrappers
 ### Supported Commands
 
 | Command         | Function                           |
-| --------------- | ------------------------------------ |
+| --------------- | ---------------------------------- |
 | `USER` / `PASS` | User authentication                |
 | `PORT` / `PASV` | Transfer mode selection            |
 | `LIST`          | List files and directories         |
@@ -68,31 +68,31 @@ The client covers the core operations of an FTP session, from authentication to 
 **Session and Authentication**
 
 | Command | Function             |
-| ------- | --------------------- |
-| `USER`  | Send username         |
-| `PASS`  | Send password         |
-| `QUIT`  | Close the connection  |
+| ------- | -------------------- |
+| `USER`  | Send username        |
+| `PASS`  | Send password        |
+| `QUIT`  | Close the connection |
 
 **Transfer Modes**
 
 | Command | Function                                          |
-| ------- | -------------------------------------------------- |
-| `PORT`  | Active mode - specifies the client-side data port  |
-| `PASV`  | Passive mode - the server opens the data port      |
-| `TYPE`  | Transfer type (ASCII `A` / Binary `I`)             |
+| ------- | ------------------------------------------------- |
+| `PORT`  | Active mode - specifies the client-side data port |
+| `PASV`  | Passive mode - the server opens the data port     |
+| `TYPE`  | Transfer type (ASCII `A` / Binary `I`)            |
 
 **File and Directory Operations**
 
 | Command | Function                               |
-| ------- | ------------------------------------------ |
+| ------- | -------------------------------------- |
 | `LIST`  | List contents of the current directory |
 | `PWD`   | Print working directory                |
 | `CWD`   | Change directory                       |
 | `RETR`  | Download a file from the server        |
-| `STOR`  | Upload a file to the server             |
-| `DELE`  | Delete a file                           |
-| `MKD`   | Create a new directory                  |
-| `RMD`   | Remove a directory                      |
+| `STOR`  | Upload a file to the server            |
+| `DELE`  | Delete a file                          |
+| `MKD`   | Create a new directory                 |
+| `RMD`   | Remove a directory                     |
 
 ### Technical Highlights
 
