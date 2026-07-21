@@ -26,6 +26,13 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
+<!-- Not auto-generated - free-form bio prose, deliberately kept separate from
+     the CV's single source of truth (Curriculum-Vitae/data/*.json) since it's
+     written for a different audience/voice. It DOES restate some of the same
+     facts (thesis title, publication status, research summary), so review it
+     by hand whenever those change in data/40-research.json, data/60-publications.json,
+     or data/20-education.json - it won't update on its own. -->
+
 Hi! I'm **Enea Manzi**, a Cyber Security graduate working on **security assurance for distributed and service-oriented systems** at **SESAR Lab** (Secure Service-oriented Architectures Research Lab), University of Milan.
 
 My research addresses the **oracle problem** in automated security testing: how to establish trust in an automated verdict when checking a system for security violations. My Master's thesis, _APIGuard Assurance_, proposes a **contract-driven, API-agnostic methodology** that derives all target knowledge from the OpenAPI Specification, organizing security checks into a taxonomy of eight domains traceable to OWASP and CWE. This work is the basis of a paper submitted to **ITADATA 2026**. Earlier, during my Bachelor's thesis, I contributed to an **Assurance Engine** for verifying non-functional properties (CIA triad, reliability, scalability) in Edge-Cloud Continuum systems, deployed on Kubernetes.

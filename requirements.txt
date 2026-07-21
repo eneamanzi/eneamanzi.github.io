@@ -1,3 +1,4 @@
 nbconvert
+pydantic>=2,<3
 pyyaml
 scholarly
