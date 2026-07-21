@@ -1,0 +1,154 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta name="google-site-verification" content="_ybgqp15m9ukW-jOwmlr56m-S002Jvjb7iUp57SaXvM"> <meta http-equiv="Permissions-Policy" content="interest-cohort=()"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Event-Driven IoT Architecture (Kafka + Kong) | Enea Manzi </title> <meta name="author" content="Enea Manzi"> <meta name="description" content="Development of a cloud-native microservices infrastructure on Kubernetes for IoT ingestion and monitoring, with a particular focus on non-functional properties such as scalability, fault tolerance, and edge-to-core security."> <meta name="keywords" content="Enea Manzi, Cyber Security, Cloud Security, Network Security, Kubernetes, Docker, DevSecOps, Python, Bash, C, Linux, Risk Management, GDPR, Data Protection, Incident Response, REST API, Security Engineering, University of Milan, Sicurezza Informatica, Sicurezza delle Reti, Milano"> <meta property="og:site_name" content="Enea Manzi"> <meta property="og:type" content="website"> <meta property="og:title" content="Enea Manzi | Event-Driven IoT Architecture (Kafka + Kong)"> <meta property="og:url" content="https://eneamanzi.github.io/projects/event-driven-iot-kafka-kong/"> <meta property="og:description" content="Development of a cloud-native microservices infrastructure on Kubernetes for IoT ingestion and monitoring, with a particular focus on non-functional properties such as scalability, fault tolerance, and edge-to-core security."> <meta property="og:image" content="/assets/img/cv_pic_resized.png"> <meta property="og:locale" content="en"> <meta name="twitter:card" content="summary"> <meta name="twitter:title" content="Event-Driven IoT Architecture (Kafka + Kong)"> <meta name="twitter:description" content="Development of a cloud-native microservices infrastructure on Kubernetes for IoT ingestion and monitoring, with a particular focus on non-functional properties such as scalability, fault tolerance, and edge-to-core security."> <meta name="twitter:image" content="/assets/img/cv_pic_resized.png"> <script type="application/ld+json">
+    {
+        "author":
+        {
+            "@type": "Person",
+            "name": "Enea Manzi"
+        },
+        "url": "https://eneamanzi.github.io/projects/event-driven-iot-kafka-kong/",
+        "@type": "WebSite",
+        "description": "Development of a cloud-native microservices infrastructure on Kubernetes for IoT ingestion and monitoring, with a particular focus on non-functional properties such as scalability, fault tolerance, and edge-to-core security.",
+        "headline": "Event-Driven IoT Architecture (Kafka + Kong)",
+        
+        "sameAs": [null,"https://www.linkedin.com/in/eneamanzi","https://github.com/eneamanzi"],
+        
+        "name": "Enea Manzi",
+        "@context": "https://schema.org"
+    }
+  </script> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.36.4/dist/tocbot.css" integrity="sha256-zTN0r+0OKaIv2xqeNNIYxNk0pWJ6+IqPGc1iDgVzWF0=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/favicon.png?v=1485820999607d3a77bbcce94f179384"> <link rel="stylesheet" href="/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://eneamanzi.github.io/projects/event-driven-iot-kafka-kong/"> <script src="/assets/js/theme.js?v=7af685e2ba20b37fef545c97b8064050"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Enea</span> Manzi </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">About Me </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">Projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item "> <a class="nav-link" href="/career/">Academic Career </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="row"> <div class="col-sm-3"> <nav id="toc-sidebar" class="sticky-top toc toc-sidebar" aria-label="Table of contents" data-toc-collapse="expanded" data-toc-collapse-depth=""></nav> </div> <div class="col-sm-9"> <div class="post"> <header class="post-header"> <h1 class="post-title">Event-Driven IoT Architecture (Kafka + Kong)</h1> <p class="post-description">Development of a cloud-native microservices infrastructure on Kubernetes for IoT ingestion and monitoring, with a particular focus on non-functional properties such as scalability, fault tolerance, and edge-to-core security.</p> </header> <article> <h2 id="summary-from-cv">Summary (from CV)</h2> <p><em>Cloud Computing Technologies Course Project (A.Y. 2025/2026)</em></p> <ul> <li>Microservices architecture based on <strong>Apache Kafka</strong> in KRaft mode (ZooKeeper-less) for asynchronous decoupling and reliable message handling (<em>Zero Data Loss</em>).</li> <li>Integration of <strong>Kong API Gateway</strong> to implement the <em>Gateway Offloading</em> pattern, centralizing Authentication (API Key), Rate Limiting, and Load Balancing at the edge.</li> <li>Storage layer optimized on <strong>MongoDB</strong> using <strong>Time Series Collections</strong> and hybrid compression (LZ4/Zstd) to maximize storage efficiency and analytical performance.</li> <li>Full <strong>Kubernetes</strong> orchestration managed via <strong>Helm</strong>, featuring automatic scalability (HPA) and advanced security (Secrets, TLS/SASL) to meet non-functional requirements.</li> </ul> <h2 id="architecture-overview">Architecture Overview</h2> <p>The system is organized into three logical namespaces - <code class="language-plaintext highlighter-rouge">kong</code>, <code class="language-plaintext highlighter-rouge">kafka</code>, and <code class="language-plaintext highlighter-rouge">metrics</code> - following a strict <strong>Separation of Concerns</strong> principle. Data flows from edge sensors through an API Gateway, into a persistent streaming layer, and finally into an optimized time-series database.</p> <p>The event-driven design fully decouples ingestion from processing: if the consumer slows down or goes offline, messages accumulate durably in Kafka and are processed upon recovery - with <strong>zero data loss</strong>.</p> <h2 id="key-components">Key Components</h2> <h3 id="kong-api-gateway---edge-security">Kong API Gateway - Edge Security</h3> <p>Kong acts as the single entry point for all sensor traffic, implementing the <strong>Gateway Offloading</strong> pattern:</p> <ul> <li> <strong>Authentication:</strong> API Key validation at the edge - invalid requests are rejected before reaching any backend service</li> <li> <strong>Rate Limiting:</strong> 5 requests/second per client, returning <code class="language-plaintext highlighter-rouge">429 Too Many Requests</code> on excess</li> <li> <strong>Load Balancing:</strong> Round-robin distribution across Producer replicas</li> </ul> <p>The entire configuration is <strong>Infrastructure as Code</strong> via Kubernetes CRDs - no manual UI, fully reproducible.</p> <h3 id="apache-kafka---reliable-streaming">Apache Kafka - Reliable Streaming</h3> <p>Kafka runs in <strong>KRaft mode</strong> (no ZooKeeper), reducing operational complexity and attack surface. Two dedicated topic strategies handle different QoS requirements:</p> <table> <thead> <tr> <th>Topic</th> <th>Partitions</th> <th>Compression</th> <th>Retention</th> <th>Guarantee</th> </tr> </thead> <tbody> <tr> <td><code class="language-plaintext highlighter-rouge">sensor-telemetry</code></td> <td>3</td> <td>LZ4</td> <td>7 days</td> <td>At-least-once</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">sensor-alerts</code></td> <td>2</td> <td>-</td> <td>30 days</td> <td>Zero Data Loss (<code class="language-plaintext highlighter-rouge">min.insync.replicas: 2</code>)</td> </tr> </tbody> </table> <p>LZ4 compression reduces JSON network traffic by up to 60% with minimal CPU overhead.</p> <h3 id="mongodb---time-series-storage">MongoDB - Time Series Storage</h3> <p>Data is stored using MongoDB’s native <strong>Time Series Collections</strong>, which provide:</p> <ul> <li>Automatic <strong>Zstd compression</strong> (~70% storage reduction on historical data)</li> <li> <strong>Clustered indexes</strong> on <code class="language-plaintext highlighter-rouge">timestamp</code> for efficient range queries</li> <li> <strong>TTL auto-expiry</strong> at 30 days (<code class="language-plaintext highlighter-rouge">expireAfterSeconds: 2592000</code>)</li> </ul> <p>MongoDB is deployed as a <strong>StatefulSet</strong> to ensure stable pod identity and persistent volume reattachment across crashes.</p> <h3 id="python-microservices">Python Microservices</h3> <p>Three stateless/stateful services handle the full pipeline:</p> <ul> <li> <strong>Producer</strong> - Flask REST API; enriches each message with a UUID idempotency token and Kafka topic routing</li> <li> <strong>Consumer</strong> - Stateful worker (3 replicas, one per partition); normalizes and persists data to MongoDB</li> <li> <strong>Metrics Service</strong> - Exposes 5 REST analytics endpoints (temperature averages by zone, alert breakdown, 7-day activity trend, firmware status)</li> </ul> <h2 id="non-functional-properties">Non-Functional Properties</h2> <table> <thead> <tr> <th>Property</th> <th>Implementation</th> </tr> </thead> <tbody> <tr> <td><strong>Security</strong></td> <td>TLS on port 9093, SASL/SCRAM-SHA-512, Kubernetes Secrets (no hardcoded credentials)</td> </tr> <tr> <td><strong>Fault Tolerance</strong></td> <td>Kafka as async buffer; consumer crash → messages preserved → zero data loss on recovery</td> </tr> <tr> <td><strong>Self-Healing</strong></td> <td>Kubernetes restarts crashed pods automatically</td> </tr> <tr> <td><strong>Scalability</strong></td> <td>HPA configured at 50% CPU threshold; scales Producer 1→4 replicas under load</td> </tr> </tbody> </table> <p><a href="https://github.com/eneamanzi/k8s-kafka-kong" rel="external nofollow noopener" target="_blank">View on GitHub</a></p> </article> </div> </div> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Enea Manzi. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script defer src="https://cdn.jsdelivr.net/npm/tocbot@4.36.4/dist/tocbot.min.js" integrity="sha256-lo/r+jQ81wWrxdIiiiEEd538z4+dTJTt+leOuAS7GCw=" crossorigin="anonymous"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about-me",
+    title: "About Me",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-projects",
+          title: "Projects",
+          description: "A collection of my projects",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Curriculum Vitae of Enea Manzi - Cyber Security Researcher, M.Sc. graduate (University of Milan)",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "nav-academic-career",
+          title: "Academic Career",
+          description: "Full academic record from the University of Milan: courses, grades, and credits (CFU) for the Bachelor&#39;s and Master&#39;s degrees in Cyber Security.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/career/";
+          },
+        },{id: "projects-apiguard-assurance",
+          title: 'APIGuard Assurance',
+          description: "Development of an API-agnostic, contract-driven tool for REST API security assurance, with a particular focus on semantic security violations that traditional functional and syntactic testing does not capture.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/apiguard-assurance/";
+            },},{id: "projects-data-driven-cv-with-latex-lua-amp-github-actions",
+          title: 'Data-Driven CV with LaTeX, Lua &amp;amp; GitHub Actions',
+          description: "Bilingual CV and cover letter generated from a single JSON source using LaTeX and Lua. Automated compilation and deployment via GitHub Actions.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/cv-automation/";
+            },},{id: "projects-event-driven-iot-architecture-kafka-kong",
+          title: 'Event-Driven IoT Architecture (Kafka + Kong)',
+          description: "Development of a cloud-native microservices infrastructure on Kubernetes for IoT ingestion and monitoring, with a particular focus on non-functional properties such as scalability, fault tolerance, and edge-to-core security.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/event-driven-iot-kafka-kong/";
+            },},{id: "projects-exhibition-web-app",
+          title: 'Exhibition Web App',
+          description: "Built a dynamic web application serving as a digital portfolio for displaying multimedia content.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/exhibition-web-app/";
+            },},{id: "projects-ftp-client-and-server",
+          title: 'FTP Client and Server',
+          description: "Developed a multi-threaded FTP-compliant client-server application in C for file transfer, fully interoperable with FileZilla.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ftp-client-server/";
+            },},{id: "teachings-data-science-fundamentals",
+          title: 'Data Science Fundamentals',
+          description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/data-science-fundamentals/";
+            },},{id: "teachings-introduction-to-machine-learning",
+          title: 'Introduction to Machine Learning',
+          description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/introduction-to-machine-learning/";
+            },},{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/cv_english.pdf", "_blank");
+        },
+      },{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%65%6E%65%61.%6D%61%6E%7A%69@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/eneamanzi", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/eneamanzi", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
