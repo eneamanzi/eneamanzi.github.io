@@ -20,11 +20,28 @@ import os
 import re
 import sys
 
+from pydantic import BaseModel, ConfigDict, Field
+
 REPO_ROOT = os.path.join(os.path.dirname(__file__), "..")
 PROJECTS_DIR = os.path.join(REPO_ROOT, "_projects")
 RESUME_JSON = os.path.join(REPO_ROOT, "assets", "json", "resume.json")
 
 CV_ID_RE = re.compile(r"^cv_id:\s*(.+?)\s*$", re.MULTILINE)
+
+
+class Frontmatter(BaseModel):
+    """Validated before a page is written - catches a malformed/missing field
+    in resume.json's projects entry before a broken page ever gets committed."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    title: str = Field(min_length=1)
+    description: str = Field(min_length=1)
+    importance: int = Field(gt=0)
+    category: str = Field(min_length=1)
+    cv_id: str = Field(min_length=1)
+    course: str
+    highlights_md: str = Field(min_length=1)
 
 
 def strip_md(s):
@@ -68,15 +85,25 @@ def scaffold(proj):
 
     highlights_md = "\n".join(f"- {h}" for h in highlights)
 
+    fm = Frontmatter(
+        title=name,
+        description=description,
+        importance=importance,
+        category=category,
+        cv_id=cv_id,
+        course=course,
+        highlights_md=highlights_md,
+    )
+
     content = f"""---
 layout: page
-title: {name}
-description: {description}
+title: {fm.title}
+description: {fm.description}
 img:
-importance: {importance}
-category: {category}
-permalink: /projects/{cv_id}/
-cv_id: {cv_id}
+importance: {fm.importance}
+category: {fm.category}
+permalink: /projects/{fm.cv_id}/
+cv_id: {fm.cv_id}
 toc:
   sidebar: left
 ---
@@ -86,9 +113,9 @@ toc:
 
 ## Summary (from CV)
 
-{f"*{course}*" if course else ""}
+{f"*{fm.course}*" if fm.course else ""}
 
-{highlights_md}
+{fm.highlights_md}
 """
     return content
 
