@@ -1,9 +1,12 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+# Usato da jekyll-scholar/al-folio per mostrare un badge colorato/cliccabile
+# per il campo `abbr` di una voce di _bibliography/papers.bib. Chiave = valore
+# esatto (case-sensitive) del campo `abbr` nella voce BibTeX corrispondente.
+#
+# Esempio di riferimento (commentato, non attivo) - tutti i parametri
+# possibili per una voce:
+# "ABBR":
+#   url: https://esempio.com/della-conferenza-o-rivista # rende il badge cliccabile
+#   color: "#00369f" # colore di sfondo del badge (hex)
 
-"PhysRev":
-  url: https://journals.aps.org/
-
-"Vision":
-  color: "#009f36"
+"ITADATA":
+  url: https://www.itadata.it/
