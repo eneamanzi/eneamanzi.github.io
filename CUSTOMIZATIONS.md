@@ -79,7 +79,7 @@ Aggiornamento: `nav: false` da solo NON basta — la pagina restava comunque gen
   - File: `_config.yml`, sezione `exclude:` → aggiunta la riga `- _pages/profiles.md`
   - Per riattivare: rimuovi la riga da `exclude:` in `_config.yml` e rimetti `nav: true` in `_pages/profiles.md`.
 - **Motivo**: il template mostra due card duplicate che puntano entrambe al placeholder `about_einstein.md` (già escluso di suo) — funzionalità pensata per un sito di gruppo/lab con più persone, non pertinente a un portfolio personale.
-- **Non toccato**: `_data/coauthors.yml` — non è collegato a questa pagina, serve al matching dei nomi coautori per le citazioni bibliografiche di `jekyll-scholar` (irrilevante finché non usi `_bibliography/papers.bib` con più autori).
+- **Non toccato**: `_data/coauthors.yml` — non è collegato a questa pagina, serve al matching dei nomi coautori per le citazioni bibliografiche di `jekyll-scholar` (dal 2026-07-22 è effettivamente in uso, vedi sezione Publications).
 
 ---
 
@@ -91,6 +91,14 @@ Aggiornamento: `nav: false` da solo NON basta — la pagina restava comunque gen
   - Per riattivare: rimuovi la riga da `exclude:` in `_config.yml` e rimetti `nav: true` in `_pages/dropdown.md`.
 - **Motivo**: è solo la demo della funzionalità "dropdown/submenu" del tema, non contenuto reale. I due link che conteneva (`bookshelf` e `blog`) sono entrambi disattivati/inutilizzati oggi.
 - **Predisposta per il futuro**: il file `_pages/dropdown.md` resta com'era (struttura `dropdown: true` + `children:` intatta) apposta, così se un giorno serve un vero menu a tendina (es. un dropdown "CV" con dentro `/cv/` e `/career/`) basta riattivarla e aggiornare la lista `children:` con i link giusti — il link a `blog` andrebbe comunque tolto/sostituito perché quella pagina resta disattivata.
+
+---
+
+## CV rendering — override locali del gem `al_folio_cv`
+
+- **Cosa**: `_includes/cv/render.liquid`, `skills.liquid`, `languages.liquid` sono copie locali che oscurano (via il meccanismo `includes_load_paths` di Jekyll) gli omonimi template dentro il gem `al_folio_cv`. Aggiungono una sezione "Research" (nessun equivalente standard in JSON Resume) e correggono un paio di bug estetici del gem originale (parentesi/icone vuote quando un campo è vuoto). Dettagli completi nel README del repo `Curriculum-Vitae` (sezione "Website Integration"), non ripetuti qui.
+- **`.al-folio-overrides.yml`** (2026-07-22): file generato da `bundle exec al-folio upgrade overrides accept --all` — registra, per ognuno dei 3 file sopra, il gem proprietario/versione e i checksum SHA256 (upstream e locale) al momento dell'accettazione. Serve da sentinella per il futuro: se `al_folio_cv` viene aggiornato e cambia uno di questi file, il controllo automatico già presente in CI (`upgrade-check.yml`, esegue `bundle exec al-folio upgrade audit` a ogni push) passerà quel file da `acknowledged` a `stale` — segnale (non bloccante) che vale la pena controllare se serve risincronizzare l'override. Verificato che l'intero meccanismo (audit prima/dopo, build Jekyll completa) funziona correttamente.
+- Per ri-generare dopo aver modificato uno di questi 3 file: `bundle exec al-folio upgrade overrides accept --all` di nuovo.
 
 ---
 
@@ -129,7 +137,7 @@ Aggiornamento: `nav: false` da solo NON basta — la pagina restava comunque gen
        - Con **una sola** voce di esempio commentata (anche solo 6 righe, non l'header intero da 9 voci) + la voce vera → crash identico.
        - Con **zero** righe `%`-commentate che assomigliano a una voce BibTeX (`@tipo{chiave, campo=valore}`), solo un avviso in chiaro + la voce vera → build **pulita**.
        - **Causa reale**: il parser `bibtex-ruby` (6.2.0, via `jekyll-scholar` 7.3.0) in uso oggi in questa immagine Docker **non tratta più in modo sicuro un `%`-commento che ha la forma di una voce BibTeX**, anche se sintatticamente è "solo un commento" — probabilmente una regressione del parser rispetto a quando questo trick fu testato la prima volta (punto 1 sopra). Il messaggio "unhandled exception" è un artefatto del meccanismo di cache interno di Jekyll che maschera il vero errore (`BibTeX::ParseError`) su alcune versioni di Ruby - con Ruby 3.3 il vero errore emerge chiaramente, con la Ruby più recente dell'immagine (4.0.x, non pinnata né qui né nel repo ufficiale al-folio) viene mascherato.
-       - **Fix**: tolto qualunque esempio `%`-commentato somigliante a una voce BibTeX da `papers.bib` (generato dallo script del repo CV, vedi sopra) - resta solo un avviso in chiaro senza forma `@tipo{...}`. Il riferimento ai campi possibili (`selected`, `preview`, `bibtex_show`, `doi`, ecc.) è stato spostato qui in `CUSTOMIZATIONS.md` (markdown puro, mai passato dal parser BibTeX, quindi a rischio zero): {selected: true} evidenzia un paper in home (richiede anche `selected_papers: true` in `about.md`); `preview: nome-file.png/gif` mostra un'anteprima; `bibtex_show: true` mostra il BibTeX grezzo espandibile; `doi`/`altmetric`/`dimensions`/`google_scholar_id`/`inspirehep_id` alimentano i badge citazione; `award`/`award_name` mostrano un riconoscimento; `video`/`html`/`url`/`pdf` sono link aggiuntivi; `abbr` è l'etichetta breve della venue (vedi `_data/venues.yml`); `additional_info` aggiunge testo libero (markdown) sotto la voce; `annotation` aggiunge una nota a piè di voce.
+       - **Fix**: tolto qualunque esempio `%`-commentato somigliante a una voce BibTeX da `papers.bib` (generato dallo script del repo CV, vedi sopra) - resta solo un avviso in chiaro senza forma `@tipo{...}`. L'elenco completo dei campi extra che il layout capisce (`selected`, `preview`, `bibtex_show`, `doi`, `pdf`, `video`, `code`, ecc. — verificati uno per uno leggendo `_layouts/bib.liquid` della gemma `al_folio_core`) è mantenuto in un unico posto per evitare che due elenchi vadano fuori sincrono: la testa del file generato da `generate_papers_bib.py` nel repo CV (commento semplice, mai una voce BibTeX finta — vedi il punto sopra sul perché).
        - **Attenzione per il futuro**: non rimettere mai un blocco di esempi BibTeX commentato con `%` direttamente in `papers.bib`, per quanto sembri innocuo — verificato che fa crashare la build con le versioni attuali del toolchain. Se serve un esempio, va nella documentazione (qui), mai nel file `.bib` stesso.
 
 - **Cosa**: dati autore aggiornati nella config di jekyll-scholar (dato vero, non un toggle).
